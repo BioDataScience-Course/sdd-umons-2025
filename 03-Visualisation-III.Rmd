@@ -706,11 +706,11 @@ if (exists("assignment"))
     course.ids = c(
       'S-BIOG-006' = !"A03Ia_{YY}M_graphe_avance"),
     course.urls = c(
-      'S-BIOG-006' = "https://classroom.github.com/a/f4nCD4Zh"),
+      'S-BIOG-006' = !"{assign_url$A03Ia_graphe_avance}"),
     course.starts = c(
-      'S-BIOG-006' = !"{W[10]+1} 13:00:00"),
+      'S-BIOG-006' = !"{class1_start(mod, 'A03')}"),
     course.ends = c(
-      'S-BIOG-006' = !"{W[11]+1} 23:59:59"),
+      'S-BIOG-006' = !"{n3_end(mod, 'A03')}"),
     term = "Q1", level = 3,
     toc = "Graphiques avancés (barres, boites à moustaches et composites)")
 ```
@@ -725,37 +725,6 @@ if (exists("assignment"))
 
 -   [Site du package {patchwork}](https://patchwork.data-imaginist.com). Une façon puissante et intuitive de réaliser des graphiques composites dans R.
 
-```{=html}
-<!--
-
-## Choix du graphique
-
-Les différents graphiques que vous avez étudiés dans les trois modules ont tous des rôles différents. Il est très important de choisir le bon graphique en fonction de ce que vous voulez mettre en évidence dans les données. Nous vous proposons maintenant d'établir un **diagramme décisionnel** en fonction de :
-
--   nombre de variables à représenter (1, 2, 3, ou 4)
--   type de la ou des variables (qualitatif non ordonné **factor**, qualitatif ordonné **ordered**, quantitatif discret **integer** ou quantitatif continu **numeric**)
--   quantité de données à représenter
--   question que l'on se pose
-
-Vous utilisez le logiciel que vous voulez pour créer ce diagramme. Les logiciels de "mind mapping" tels que [Coggle](https://coggle.it) se prêtent très bien à cet exercice. Une fois votre document terminé, placez-le dans le dépôt GitHub suivant afin que vous puissiez rapidement le récupérer. **Nous vous conseillons de garder ce document à disposition plus tard lorsque vous aurez des graphiques à réaliser.**
-
-{r assign_A04Ga_decision_tree, echo=FALSE, results='asis'}
-if (exists("assignment2"))
-  assignment2("A04Ga_decision_tree", part = NULL,
-    url = "https://github.com/BioDataScience-Course/A04Ga_decision_tree",
-    course.ids = c(
-      'S-BIOG-006' = !"A04Ga_{YY}M_decision tree"),
-    course.urls = c(
-      'S-BIOG-006' = "https://classroom.github.com/a/..."),
-    course.starts = c(
-      'S-BIOG-006' = !"{W[10]+5} 08:00:00"),
-    course.ends = c(
-      'S-BIOG-006' = !"{W[10]+5} 23:59:59"),
-    term = "Q1", level = 4, n = 5,
-    toc = "Diagramme décisionnel des graphiques")
-
--->
-```
 
 ## Différents moteurs graphiques
 
@@ -864,11 +833,11 @@ if (exists("assignment2"))
     course.ids = c(
       'S-BIOG-006' = !"A02Ga_{YY}M_analysis"),
     course.urls = c(
-      'S-BIOG-006' = "https://classroom.github.com/a/oDqM6on_"),
+      'S-BIOG-006' = !"{assign_url$A02Ga_analysis}"),
     course.starts = c(
-      'S-BIOG-006' = !"{W[5]+5} 09:00:00"),
+      'S-BIOG-006' = !"{class2_start(mod, 'A02')}"),
     course.ends = c(
-      'S-BIOG-006' = !"{W[15]+2} 23:59:59"),
+      'S-BIOG-006' = !"{n4_end(mod, 'A05')}"),
     term = "Q1", level = 4, n = 4,
     toc = "Analyse de données (partie II)")
 ```
@@ -1057,11 +1026,11 @@ if (exists("challenge"))
     course.ids = c(
       'S-BIOG-006' = !"A03Ca_{YY}M_charts"),
     course.urls = c(
-      'S-BIOG-006' = "https://classroom.github.com/a/2zwrzeng"),
+      'S-BIOG-006' = !"{assign_url$A03Ca_charts}"),
     course.starts = c(
-      'S-BIOG-006' = !"{W[10]+5} 09:45:00"),
+      'S-BIOG-006' = !"{mod['A03', 'challenge']} 09:45:00"),
     course.ends = c(
-      'S-BIOG-006' = !"{W[10]+5} 11:30:00"),
+      'S-BIOG-006' = !"{mod['A03', 'challenge']} 11:30:00"),
     toc = "Challenge graphiques")
 ```
 

@@ -273,9 +273,7 @@ quantile(student_t, 0.025)
 quantile(student_t, 1 - 0.025)
 ```
 
-```{block, type='note'}
 On pourra aussi dire que la moyenne d'un échantillon de neuf observations issu de notre population théorique de référence sera comprise entre 6,5 et 9,5 (ou 8 ± 1,5) dans 95% des cas. La Fig. \@ref(fig:tdistri2) le montre graphiquement.
-```
 
 ```{r tdistri2, echo=FALSE, fig.cap="Une distribution de Student avec aire extrême de 5% mise en évidence en rouge."}
 # Student's t distribution (density probability) with parameters:
@@ -887,11 +885,11 @@ if (exists("assignment"))
     course.ids = c(
       'S-BIOG-027' = !"A08Ia_{YY}M_ttest"),
     course.urls = c(
-      'S-BIOG-027' = "https://classroom.github.com/a/pe1zXXfq"),
+      'S-BIOG-027' = !"{assign_url$A08Ia_ttest}"),
     course.starts = c(
-      'S-BIOG-027' = !"{W[27]+1} 13:00:00"),
+      'S-BIOG-027' = !"{class1_start(mod, 'A08')}"),
     course.ends = c(
-      'S-BIOG-027' = !"{W[28]+1} 23:59:59"),
+      'S-BIOG-027' = !"{n3_end(mod, 'A08')}"),
     term = "Q2", level = 3,
     toc = "Tests de Student - adaptation d'algues")
 ```
@@ -1102,40 +1100,18 @@ Appliquez vos nouvelles connaissances dans le projet GitHub Classroom de groupe 
 if (exists("assignment2"))
   assignment2("A07Ga_human", part = "II",
     url = "https://github.com/BioDataScience-Course/A07Ga_human",
-    course.ids = c(
+        course.ids = c(
       'S-BIOG-027' = !"A07Ga_{YY}M_human"),
     course.urls = c(
-      'S-BIOG-027' = "https://classroom.github.com/a/M2cmViW4"),
+      'S-BIOG-027' = !"{assign_url$A07Ga_human}"),
     course.starts = c(
-      'S-BIOG-027' = !"{W[25]+1} 13:00:00"),
+      'S-BIOG-027' = !"{class1_start(mod, 'A07')}"),
     course.ends = c(
-      'S-BIOG-027' = !"{W[36]+2} 23:59:59"),
+      'S-BIOG-027' = !"{n4_end(mod, 'A10')}"),
     term = "Q2", level = 4, n = 4,
     toc = "Biométrie humaine, part II")
 ```
 
-```{=html}
-<!-- **Note : Le projet suivant est la continuité d'un exercice débuté au premier quadrimestre et approfondi au module précédent.**
-
-{r assign_A09Ga_urchin_III, echo=FALSE, results='asis'}
-if (exists("assignment2"))
-  assignment2("A09Ga_urchin", part = "III",
-    url = "https://github.com/BioDataScience-Course/A03Ga_urchin",
-    course.ids = c(
-      'S-BIOG-027' = !"A03Ga_{YY}M_urchin", # TODO: how to account it in Q2???
-      'S-BIOG-921' = !"A03Ga_{YY}C_urchin"),
-    course.urls = c(
-      'S-BIOG-027' = "https://classroom.github.com/a/...", 
-      'S-BIOG-921' = "https://classroom.github.com/g/..."),
-    course.starts = c(
-      'S-BIOG-027' = !"{W[27]+1} 10:00:00"),
-    course.ends = c(
-      'S-BIOG-027' = !"{W[37]+1} 23:59:59"),
-    term = "Q2", level = 4, n = 2,
-    toc = "Biométrie de l'oursin violet, part III")
-
--->
-```
 
 ## Récapitulatif des exercices
 

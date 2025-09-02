@@ -1146,57 +1146,15 @@ if (exists("assignment"))
     course.ids = c(
       'S-BIOG-027' = !"A06Ia_{YY}M_correlation"),
     course.urls = c(
-      'S-BIOG-027' = "https://classroom.github.com/a/4bocoG5d"),
+      'S-BIOG-027' = !"{assign_url$A06Ia_correlation}"),
     course.starts = c(
-      'S-BIOG-027' = !"{W[23]+1} 13:00:00"),
+      'S-BIOG-027' = !"{class1_start(mod, 'A06')}"),
     course.ends = c(
-      'S-BIOG-027' = !"{W[24]+1} 23:59:59"),
+      'S-BIOG-027' = !"{n3_end(mod, 'A06')}"),
     term = "Q2", level = 3,
     toc = "Association entre des variables")
 ```
 
-
-```{=html}
-<!--
-
-**Entamez maintenant votre gros projet transmodule sur la santé humaine en y calculant des corrélations et en effectuant des tests de corrélations.**
-
-{r assign_A06Ga_human_health_I, echo=FALSE, results='asis'}
-if (exists("assignment2"))
-  assignment2("A06Ga_human_health", part = "I",
-    url = "https://github.com/BioDataScience-Course/A06Ga_human_health",
-    course.ids = c(
-      'S-BIOG-027' = !"A06Ga_{YY}M_human_health"),
-    course.urls = c(
-      'S-BIOG-027' = "https://classroom.github.com/a/..."),
-    course.starts = c(
-      'S-BIOG-027' = !"{W[25]+1} 13:00:00"),
-    course.ends = c(
-      'S-BIOG-027' = !"{W[37]+1} 23:59:59"),
-    term = "Q2", level = 4, n = 4,
-    toc = "Biométrie humaine, part I")
--->
-```
-
-```{=html}
-<!-- {r assign_A10Ga_urchin_VI, echo=FALSE, results='asis'}
-if (exists("assignment2"))
-  assignment2("A10Ga_urchin", part = "VI",
-    url = "https://github.com/BioDataScience-Course/A03Ga_urchin",
-    course.ids = c(
-      'S-BIOG-027' = !"A03Ga_{YY}M_urchin", # TODO: how to account it in Q2???
-      'S-BIOG-921' = !"A03Ga_{YY}C_urchin"),
-    course.urls = c(
-      'S-BIOG-027' = "https://classroom.github.com/a/...", 
-      'S-BIOG-921' = "https://classroom.github.com/g/..."),
-    course.starts = c(
-      'S-BIOG-027' = !"{W[29]+1} 13:00:00"),
-    course.ends = c(
-      'S-BIOG-027' = !"{W[37]+1} 23:59:59"),
-    term = "Q2", level = 4, n = 2,
-    toc = "Biométrie de l'oursin violet, part VI")
--->
-```
 
 ## Récapitulatif des exercices
 

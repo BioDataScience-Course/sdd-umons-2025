@@ -4,9 +4,12 @@
 SciViews::R("infer", "explore", lang = "fr")
 ```
 
+Bien que cela semble être des compétences "douces" (soft skills), la communication et l'esprit critique sont **indispensables** pour un scientifique des données. En effet, il doit être capable de communiquer clairement ses résultats à des non-initiés, et aussi de critiquer les résultats d'autres scientifiques. Ces deux compétences sont essentielles pour réussir dans ce domaine.
+
+
 ## Communication
 
-Savoir communiquer ses résultats est vital en science des données. Ce n'est pas si facile, car il faut pouvoir simplifier les analyses et utiliser au mieux les visuels (c'est-à-dire, les graphiques) pour raconter une histoire qui soit à la fois captivante et compréhensible. **Communiquer le fruit de ses recherches de la meilleure façon qui soit pour que les non-initiés puissent le comprendre fait partie du bagage indispensable du scientifique des données**.
+Être capable de bien communiquer ses résultats est vital en science des données. Ce n'est pas si facile, car il faut pouvoir simplifier les analyses et utiliser au mieux les visuels (c'est-à-dire, les graphiques) pour raconter une histoire qui soit à la fois captivante et compréhensible. **Communiquer le fruit de ses recherches de la meilleure façon qui soit pour que les non-initiés puissent le comprendre fait partie du bagage indispensable du scientifique des données**.
 
 ![](images/sdd1_12/data-scientist-useful.jpg)
 
@@ -64,11 +67,6 @@ Enfin, quelques packages R additionnels proposent d'autres formats de présentat
 Quel type de présentation R Markdown ou Quarto choisir au final ? Toute cette panoplie d'options ne facilite pas notre choix. En fait, c'est plus une question de goût personnel. Essayez les différentes options par vous-même. Le choix principal est, au final, entre un format HTML, PDF ou PowerPoint. Le format PDF est, par définition, plus portable. Cependant, il ne permet que du contenu statique. Si vous avez des gifs animés, des graphiques interactifs, ou des vidéos, alors orientez-vous plutôt vers un moteur HTML/Javascript.
 ```
 
-```{=html}
-<!-- ##### À vous de jouer ! {.unnumbered}
-
-**Note : il est indispensable de pouvoir synthétiser un travail complexe. Dans votre carrière de chercheur, vous serez souvent confronté à devoir réaliser des présentations. Réalisez une présentation de maximum cinq diapositives dans le format de votre souhait.** -->
-```
 
 ## Critique statistique
 
@@ -312,28 +310,3 @@ Par le plus grand des hasards, le numéro 8 est sorti 6 fois en 7 tirages succes
 ***La prochaine fois que vous remplirez votre grille de lotto, jouerez-vous le numéro 8 ? Pourquoi ?***
 
 ***Vous est-il arrivé de jouer la suite 1, 2, 3, 4, 5, 6, 7, 8 au lotto (ou rempliriez-vous une grille avec ces nombres si vous deviez y jouer) ? Pourquoi ?***
-
-````{=html}
-<!--
-------------------------------------------------------------------------
-
-##### À vous de jouer ! {.unnumbered}
-
-```{r assign_A12Ia_correlation_II, echo=FALSE, results='asis'}
-if (exists("assignment"))
-  assignment("A12Ia_correlation", part = "II",
-    url = "https://github.com/BioDataScience-Course/A12Ia_correlation",
-    course.ids = c(
-      'S-BIOG-027' = !"A12Ia_{YY}M_correlation"),
-    course.urls = c(
-      'S-BIOG-027' = "https://classroom.github.com/a/..."),
-    course.starts = c(
-      'S-BIOG-027' = !"{W[35]+1} 13:00:00"),
-    course.ends = c(
-      'S-BIOG-027' = !"{W[37]+1} 23:59:59"),
-    term = "Q2", level = 3,
-    toc = "Critique statistique")
-```
-
--->
-````

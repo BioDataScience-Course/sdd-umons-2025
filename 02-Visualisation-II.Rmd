@@ -309,11 +309,11 @@ if (exists("assignment"))
     course.ids = c(
       'S-BIOG-006' = !"A02Ia_{YY}M_distributions"),
     course.urls = c(
-      'S-BIOG-006' = "https://classroom.github.com/a/HSj-nDoy"),
+      'S-BIOG-006' = !"{assign_url$A02Ia_distributions}"),
     course.starts = c(
-      'S-BIOG-006' = !"{W[5]+1} 13:00:00"),
+      'S-BIOG-006' = !"{class1_start(mod, 'A02')}"),
     course.ends = c(
-      'S-BIOG-006' = !"{W[6]+1} 23:59:59"),
+      'S-BIOG-006' = !"{n3_end(mod, 'A02')}"),
     term = "Q1", level = 3,
     toc = "Graphiques de distribution des données")
 ```
@@ -514,11 +514,11 @@ if (exists("assignment2"))
     course.ids = c(
       'S-BIOG-006' = !"A02Ga_{YY}M_analysis"),
     course.urls = c(
-      'S-BIOG-006' = "https://classroom.github.com/a/oDqM6on_"),
+      'S-BIOG-006' = !"{assign_url$A02Ga_analysis}"),
     course.starts = c(
-      'S-BIOG-006' = !"{W[5]+5} 09:00:00"),
+      'S-BIOG-006' = !"{class2_start(mod, 'A02')}"),
     course.ends = c(
-      'S-BIOG-006' = !"{W[15]+2} 23:59:59"),
+      'S-BIOG-006' = !"{n4_end(mod, 'A05')}"),
     term = "Q1", level = 4, n = 4,
     toc = "Analyse de données (partie I, par groupe de 4)")
 ```

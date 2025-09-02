@@ -1029,29 +1029,14 @@ if (exists("assignment"))
     course.ids = c(
       'S-BIOG-006' = !"A04Ia_{YY}M_transformation"),
     course.urls = c(
-      'S-BIOG-006' = "https://classroom.github.com/a/-_PWUcb4"),
+      'S-BIOG-006' = !"{assign_url$A04Ia_transformation}"),
     course.starts = c(
-      'S-BIOG-006' = !"{W[12]+1} 13:00:00"),
+      'S-BIOG-006' = !"{class1_start(mod, 'A04')}"),
     course.ends = c(
-      'S-BIOG-006' = !"{W[13]+1} 23:59:59"),
+      'S-BIOG-006' = !"{n3_end(mod, 'A04')}"),
     term = "Q1", level = 3,
     toc = "Importation et transformation de données")
 ```
-
-````{=html}
-<!---- A retravailler 
-- Afin d'appliquer vos nouvelles connaissances, un challenge vous est proposé afin d'améliorer vos compétences en remaniement de données. 
-
-```{block, type='bdd'}
-Réalisez dans le projet sur le zooplancton les exercices suivants :
-  
-  <https://github.com/BioDataScience-Course/sdd_lesson/blob/2019-2020/sdd1_05/exercises/sdd1_05_zooplankton.md>
-  
-Consignez vos résultats dans un document R Markdown avec une explication de vos différents remaniements.
-```
-
----->
-````
 
 **Vous allez maintenant planifier la récolte et collecter des données relatives à l'étude de l'obésité afin de préparer le travail du module 5.**
 
@@ -1062,11 +1047,11 @@ if (exists("assignment2"))
     course.ids = c(
       'S-BIOG-006' = !"A04Ga_{YY}M_biometry"),
     course.urls = c(
-      'S-BIOG-006' = "https://classroom.github.com/a/e4e8IxBu"),
+      'S-BIOG-006' = !"{assign_url$A04Ga_biometry}"),
     course.starts = c(
-      'S-BIOG-006' = !"{W[12]+5} 08:00:00"),
+      'S-BIOG-006' = !"{class2_start(mod, 'A04')}"),
     course.ends = c(
-      'S-BIOG-006' = !"{W[15]+2} 23:59:59"),
+      'S-BIOG-006' = !"{n4_end(mod, 'A05')}"),
     term = "Q1", level = 4, n = 4,
     toc = "Collecte de données relative à l'obésité")
 ```
@@ -1080,11 +1065,11 @@ if (exists("assignment2"))
     course.ids = c(
       'S-BIOG-006' = !"A02Ga_{YY}M_analysis"),
     course.urls = c(
-      'S-BIOG-006' = "https://classroom.github.com/a/oDqM6on_"),
+      'S-BIOG-006' = !"{assign_url$A02Ga_analysis}"),
     course.starts = c(
-      'S-BIOG-006' = !"{W[5]+5} 09:00:00"),
+      'S-BIOG-006' = !"{class2_start(mod, 'A02')}"),
     course.ends = c(
-      'S-BIOG-006' = !"{W[15]+2} 23:59:59"),
+      'S-BIOG-006' = !"{n4_end(mod, 'A05')}"),
     term = "Q1", level = 4, n = 4,
     toc = "Analyse de données (partie III)")
 ```

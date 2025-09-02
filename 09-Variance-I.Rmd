@@ -509,11 +509,11 @@ if (exists("assignment"))
     course.ids = c(
       'S-BIOG-027' = !"A09Ia_{YY}M_acidification"),
     course.urls = c(
-      'S-BIOG-027' = "https://classroom.github.com/a/rFuYBpa_"),
+      'S-BIOG-027' = !"{assign_url$A09Ia_acidification}"),
     course.starts = c(
-      'S-BIOG-027' = !"{W[29]+1} 13:00:00"),
+      'S-BIOG-027' = !"{class1_start(mod, 'A09')}"),
     course.ends = c(
-      'S-BIOG-027' = !"{W[30]+1} 23:59:59"),
+      'S-BIOG-027' = !"{n3_end(mod, 'A09')}"),
     term = "Q2", level = 3,
     toc = "ANOVA (effet de l'acidification)")
 ```
@@ -594,38 +594,19 @@ Appliquez vos nouvelles connaissances dans le projet de groupe que vous avez dé
 if (exists("assignment2"))
   assignment2("A07Ga_human", part = "III",
     url = "https://github.com/BioDataScience-Course/A07Ga_human",
-    course.ids = c(
+        course.ids = c(
       'S-BIOG-027' = !"A07Ga_{YY}M_human"),
     course.urls = c(
-      'S-BIOG-027' = "https://classroom.github.com/a/M2cmViW4"),
+      'S-BIOG-027' = !"{assign_url$A07Ga_human}"),
     course.starts = c(
-      'S-BIOG-027' = !"{W[25]+1} 13:00:00"),
+      'S-BIOG-027' = !"{class1_start(mod, 'A07')}"),
     course.ends = c(
-      'S-BIOG-027' = !"{W[36]+2} 23:59:59"),
+      'S-BIOG-027' = !"{n4_end(mod, 'A10')}"),
     term = "Q2", level = 4, n = 4,
     toc = "Biométrie humaine, part III")
 ```
 
-```{=html}
-<!-- **Note : Le projet suivant est la continuité d'un exercice débuté au premier quadrimestre et approfondis aux deux modules précédents.**
 
-{r assign_A10Ga_urchin_IV, echo=FALSE, results='asis'}
-if (exists("assignment2"))
-  assignment2("A10Ga_urchin", part = "IV",
-    url = "https://github.com/BioDataScience-Course/A03Ga_urchin",
-    course.ids = c(
-      'S-BIOG-027' = !"A03Ga_{YY}M_urchin", # TODO: how to account it in Q2???
-      'S-BIOG-921' = !"A03Ga_{YY}C_urchin"),
-    course.urls = c(
-      'S-BIOG-027' = "https://classroom.github.com/a/...", 
-      'S-BIOG-921' = "https://classroom.github.com/g/..."),
-    course.starts = c(
-      'S-BIOG-027' = !"{W[29]+1} 13:00:00"),
-    course.ends = c(
-      'S-BIOG-027' = !"{W[37]+1} 23:59:59"),
-    term = "Q2", level = 4, n = 2,
-    toc = "Biométrie de l'oursin violet, part IV") -->
-```
 ## Récapitulatif des exercices
 
 Vous venez de terminer le module 9. Ce module vous a permis d'apprendre une grande partie des subtilités qui se cachent derrière l'analyse de variance. Pour évaluer votre compréhension de cette matière, vous aviez les exercices suivants à réaliser :

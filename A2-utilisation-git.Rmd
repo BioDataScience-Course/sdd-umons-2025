@@ -67,7 +67,7 @@ Créez votre premier projet en suivant les quatre étapes suivantes :
 
     -   Nommez le projet dans `Directory name || Nom du répertoire`. Indiquez ici `project_test`
     -   Indiquez où vous voulez le placer dans `Create project as subdirectory of || Créer un projet en tant que sous-répertoire de`. Sélectionnez le sous-dossier `workspace` dans Saturn Cloud ou le sous-dossier `projects` dans le dossier `shared` partagé entre la SciViews Box et la machine hôte si vous travaillez dans VirtualBox.
-    -   Cochez l'option `Create a git repository || Créer un répôt gity`.
+    -   Cochez l'option `Create a git repository || Créer un dépôt git`.
     -   Assurez-vous que l'option `Use renv with this project || Utiliser renv avec ce projet` soit bien **décochée** (**il est très important de ne pas sélectionner renv, sous peine de réinstaller et dupliquer de nombreux dossiers et fichiers --appelés "packages" ou "paquets" R-- dans votre projet**)
 
 Vous utilisez le même menu déroulant `Project || Projet` en haut à droite de la barre d'outils générale pour réouvrir un projet existant (`Open Project... || Ouvrir le projet...`) ou fermer le projet actuel (`Close Project || Fermer le projet`). Vous remarquez également que les derniers projets visités sont listés en dessous, ce qui permet d'y accéder plus rapidement.
@@ -183,7 +183,7 @@ Vous apprendrez que vous pouvez réaliser cela dans un **script R** (fichier reg
 
 Une fois que vous connaissez le répertoire actif, vous naviguez *à partir de* celui-ci. Il existe une convention pour reculer d'un dossier dans la hiérarchie. Pour cela vous indiquez `..` à la place d'un nom de dossier. Voici ce que cela donne :
 
-```         
+```
 ../data/dataset.csv
 ```
 
@@ -334,7 +334,7 @@ Dans notre exemple, nous pouvons observer 983 contributions pendant l'année éc
 
 ### Vos projets
 
-GitHub vous sert à héberger vos projets dans des **dépôts** (qui se nomment des *repositories* en anglais). Notre exemple se base sur le dépôt [sdd-umons-2024](https://github.com/BioDataScience-Course/sdd-umons-2024), que vous pouvez librement consulter et qui contient les sources du présent ouvrage en ligne. Il s'agit en effet d'un dépôt public. Vous avez la possibilité d'avoir des projets publics ou privés (vos exercices dans le cadre du cours seront, eux, dans des dépôts privés visibles uniquement de vous et de vos enseignants).
+GitHub vous sert à héberger vos projets dans des **dépôts** (qui se nomment des *repositories* en anglais). Notre exemple se base sur le dépôt [sdd-umons-2024](https://github.com/BioDataScience-Course/sdd-umons-2024), que vous pouvez librement consulter et qui contient les sources d'une version antérieure du présent ouvrage en ligne. Il s'agit en effet d'un dépôt public. Vous avez la possibilité d'avoir des projets publics ou privés (vos exercices dans le cadre du cours seront, eux, dans des dépôts privés visibles uniquement de vous et de vos enseignants).
 
 Les projets publics sont visibles par tous. La collaboration est la pierre angulaire de GitHub. Donc, tout le monde peut y apporter des modifications dans des copies de vos dépôts et puis vous les proposer d'une manière qui vous permet d'examiner les améliorations suggérées, de les discuter, et enfin de les incorporer ou de les rejeter. Cela s'appelle un **Pull request**, mais nous y reviendrons plus tard. Pour des projets plus sensibles, vous avez la possibilité de les héberger en mode privé et de ne les partager qu'avec un nombre restreint et prédéterminé d'utilisateurs.
 

@@ -533,11 +533,11 @@ if (exists("assignment"))
     course.ids = c(
       'S-BIOG-027' = !"A07Ia_{YY}M_pea"),
     course.urls = c(
-      'S-BIOG-027' = "https://classroom.github.com/a/G-X1A4ga"),
+      'S-BIOG-027' = !"{assign_url$A07Ia_pea}"),
     course.starts = c(
-      'S-BIOG-027' = !"{W[25]+1} 13:00:00"),
+      'S-BIOG-027' = !"{class1_start(mod, 'A07')}"),
     course.ends = c(
-      'S-BIOG-027' = !"{W[26]+1} 23:59:59"),
+      'S-BIOG-027' = !"{n3_end(mod, 'A07')}"),
     term = "Q2", level = 3,
     toc = "Génétique mendélienne")
 ```
@@ -685,7 +685,7 @@ crabs <- read("crabs", package = "MASS")
 
 L'aide en ligne de ce jeu de données (voir `.?crabs`) nous indique qu'il s'agit de mesures réalisées sur des crabes de l'espèce *Leptograpsus variegatus* (Fabricius, 1793) collectés à Fremantle à l'ouest de l'Australie. Deux variétés co-existent (correctement libellées `species` dans le jeu de données, car il s'agit, en réalité, de deux espèces différentes) : la variété bleue (`B`) et la variété orange (`O`).
 
-![Crabe *Leptograpsus variegatus* variété bleue. Photo : Neville Coleman, license CC By 4.0 [Museums Victoria](https://collections.museumvictoria.com.au/species/8662).](images/sdd1_08/Leptograpsus_variegatus.jpg)
+![Crabe *Leptograpsus variegatus* variété bleue. Photo : Neville Coleman, license CC By 4.0 [Museums Victoria](https://collections.museumvictoria.com.au/species/8662).](images/sdd1_08/Leptograpsus-variegatus.jpg)
 
 Nous pouvons explorer ce jeu de données en vue de déterminer si des différences morphologiques de la carapace existent entre sexes (variable `sex`, soit `M`, soit `F`) ou entre variétés (variable `species`, soit `B`, soit `O`). Un tableau de contingence à deux entrées peut être obtenu à l'aide de la fonction `table()` :
 
@@ -761,7 +761,7 @@ crabs %>.%
     ylab("Ratio largeur arrière/longueur")
 ```
 
-Notre métrique `rear_length` est naturellement ultra-simple. Elle ne permet pas de différencier *tous* les mâles de *toutes* les femelles, mais la séparation est déjà bien meilleure qu'en utilisant soit `rear` soit `length` seuls. À l'aide de techniques statistiques que vous étudierez au [cours de science des données biologiques II](https://wp.sciviews.org/sdd-umons2/?iframe=wp.sciviews.org/sdd-umons2-2024/lm.html) l'an prochain, nous pouvons montrer qu'une meilleure métrique (on parle encore d'indice) pour séparer les mâles des femelles est en réalité : `rear / (0.3 * length + 2.4)`[^07-distributions-chi2-7]. La séparation entre les sexes n'est pas totale, mais s'en rapproche fortement, surtout pour la variété orange.
+Notre métrique `rear_length` est naturellement ultra-simple. Elle ne permet pas de différencier *tous* les mâles de *toutes* les femelles, mais la séparation est déjà bien meilleure qu'en utilisant soit `rear` soit `length` seuls. À l'aide de techniques statistiques que vous étudierez au `r course_link("cours de science des données biologiques II", 2, "lm")` l'an prochain, nous pouvons montrer qu'une meilleure métrique (on parle encore d'indice) pour séparer les mâles des femelles est en réalité : `rear / (0.3 * length + 2.4)`[^07-distributions-chi2-7]. La séparation entre les sexes n'est pas totale, mais s'en rapproche fortement, surtout pour la variété orange.
 
 [^07-distributions-chi2-7]: Pour le lecteur plus avancé, il s'agit en fait de la droite de régression ajustée dans le nuage de points.
 
@@ -808,11 +808,11 @@ if (exists("assignment2"))
     course.ids = c(
       'S-BIOG-027' = !"A07Ga_{YY}M_human"),
     course.urls = c(
-      'S-BIOG-027' = "https://classroom.github.com/a/M2cmViW4"),
+      'S-BIOG-027' = !"{assign_url$A07Ga_human}"),
     course.starts = c(
-      'S-BIOG-027' = !"{W[25]+1} 13:00:00"),
+      'S-BIOG-027' = !"{class1_start(mod, 'A07')}"),
     course.ends = c(
-      'S-BIOG-027' = !"{W[36]+2} 23:59:59"),
+      'S-BIOG-027' = !"{n4_end(mod, 'A10')}"),
     term = "Q2", level = 4, n = 4,
     toc = "Biométrie humaine, part I")
 ```

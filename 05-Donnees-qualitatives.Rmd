@@ -502,11 +502,11 @@ if (exists("assignment2"))
     course.ids = c(
       'S-BIOG-006' = !"A04Ga_{YY}M_biometry"),
     course.urls = c(
-      'S-BIOG-006' = "https://classroom.github.com/a/e4e8IxBu"),
+      'S-BIOG-006' = !"{assign_url$A04Ga_biometry}"),
     course.starts = c(
-      'S-BIOG-006' = !"{W[12]+5} 08:00:00"),
+      'S-BIOG-006' = !"{class2_start(mod, 'A04')}"),
     course.ends = c(
-      'S-BIOG-006' = !"{W[15]+2} 23:59:59"),
+      'S-BIOG-006' = !"{n4_end(mod, 'A05')}"),
     term = "Q1", level = 4, n = 4,
     toc = "Collecte de données relative à l'obésité")
 ```
@@ -795,11 +795,11 @@ if (exists("assignment"))
     course.ids = c(
       'S-BIOG-006' = !"A05Ia_{YY}M_belgium_demo"),
     course.urls = c(
-      'S-BIOG-006' = "https://classroom.github.com/a/Goi4OPvw"),
+      'S-BIOG-006' = !"{assign_url$A05Ia_belgium_demo}"),
     course.starts = c(
-      'S-BIOG-006' = !"{W[14]+1} 13:00:00"),
+      'S-BIOG-006' = !"{class1_start(mod, 'A05')}"),
     course.ends = c(
-      'S-BIOG-006' = !"{W[15]+1} 23:59:59"),
+      'S-BIOG-006' = !"{n3_end(mod, 'A05')}"),
     term = "Q1", level = 3,
     toc = "Démographie en Belgique")
 ```
@@ -813,11 +813,11 @@ if (exists("assignment2"))
     course.ids = c(
       'S-BIOG-006' = !"A02Ga_{YY}M_analysis"),
     course.urls = c(
-      'S-BIOG-006' = "https://classroom.github.com/a/oDqM6on_"),
+      'S-BIOG-006' = !"{assign_url$A02Ga_analysis}"),
     course.starts = c(
-      'S-BIOG-006' = !"{W[5]+5} 09:00:00"),
+      'S-BIOG-006' = !"{class2_start(mod, 'A02')}"),
     course.ends = c(
-      'S-BIOG-006' = !"{W[15]+2} 23:59:59"),
+      'S-BIOG-006' = !"{n4_end(mod, 'A05')}"),
     term = "Q1", level = 4, n = 4,
     toc = "Analyse de données (partie IV)")
 ```

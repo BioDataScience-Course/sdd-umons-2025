@@ -1,4 +1,16 @@
 # Learnitdown configuration and functions
+# We use glue() often for variables replacement from learnitdown, so, we
+# define the `!` operator for character objects to glue the string
+# Cons: it slightly slows down the usual `!` operator (10x slower)
+`!` <- function(x) {
+  if (is.character(x)) {
+    as.character(glue::glue_data(learnitdown, x))
+  } else {# Usual ! operator
+    .Primitive('!')(x)
+  }
+}
+
+# General configuration data
 learnitdown <- list(
   baseurl = "https://wp.sciviews.org", # The base URL for the site
   imgbaseurl =
@@ -19,59 +31,98 @@ learnitdown <- list(
     #"Bio-Informatique et Science des Données à Charleroi"
   ),
   acad_year = "2025-2026",               # The academic year
+  YYYY = 2025,                           # The academic year long id
   YY = 25,                               # The academic year short id
   W = as.Date("2025-09-07") + (0:37)*7,  # Sundays before each academic week
   Q1 = as.Date("2025-09-07") + (0:15)*7, # There are 15 weeks at Q1
   Q2 = as.Date("2026-02-01") + c(0:11, 14:16)*7 # Q2 starts 02/02 w22 but w33-34 are holidays
 )
 
-# We use glue() often for variables replacement from learnitdown, so, we
-# define the `!` operator for character objects to glue the string
-# Cons: it slightly slows down the usual `!` operator (10x slower)
-`!` <- function(x) {
-  if (is.character(x)) {
-    as.character(glue::glue_data(learnitdown, x))
-  } else {# Usual ! operator
-    .Primitive('!')(x)
-  }
-}
+# Course start and end dates
+learnitdown$course_start <- !"{W[2]+1}"
+learnitdown$course_end   <- !"{W[35]+5}"
+
+# Modules dates
+learnitdown$mod <- as.data.frame(tibble::tribble(
+  ~id,       ~term,       ~start,       ~class1,         ~end,       ~class2,         ~N3,            ~N4,   ~challenge,        ~test,
+  # Q1
+  "install",  "Q1",  !"{W[2]+1}", "13:30-15:30",          "-",          "-",          "-",            "-",          "-",          "-",
+  "A01",      "Q1",  !"{W[3]+1}", "13:30-15:30",  !"{W[4]+1}", "13:30-17:30", !"{W[4]+3}",            "-",          "-",  !"{W[4]+1}",
+  "A02",      "Q1",  !"{W[5]+1}", "13:30-15:30",  !"{W[5]+5}", "08:15-12:30", !"{W[6]+1}",    !"{W[5]+5}",          "-",  !"{W[5]+5}",
+  "remed1",   "Q1",  !"{W[6]+1}", "13:30-16:30",          "-",           "-",         "-",            "-",          "-",          "-",
+  "remed2",   "Q1",  !"{W[7]+1}", "13:30-16:30",          "-",           "-",         "-",            "-",          "-",          "-",
+  "A03",      "Q1", !"{W[10]+1}", "13:30-15:30", !"{W[10]+5}", "08:15-12:30", !"{W[11]+1}", "continue...", !"{W[10]+5}",          "-",
+  "A04",      "Q1", !"{W[12]+1}", "13:30-15:30", !"{W[12]+5}", "08:15-12:30", !"{W[13]+1}", "continue...",          "-", !"{W[12]+5}",
+  "A05",      "Q1", !"{W[14]+1}", "13:30-15:30", !"{W[14]+5}", "08:15-12:30", !"{W[15]+1}",  !"{W[15]+2}",          "-", !"{W[14]+5}",
+  # Q2
+  "A06",      "Q2", !"{W[23]+1}", "13:30-15:30", !"{W[23]+5}", "08:15-12:30", !"{W[24]+1}",           "-",          "-", !"{W[23]+5}",
+  "A07",      "Q2", !"{W[25]+1}", "13:30-15:30", !"{W[25]+5}", "08:15-12:30", !"{W[26]+1}",  !"{W[25]+5}",          "-", !"{W[25]+5}",
+  "A08",      "Q2", !"{W[27]+1}", "13:30-15:30", !"{W[27]+5}", "08:15-12:30", !"{W[28]+1}", "continue...",          "-", !"{W[27]+5}",
+  "A09",      "Q2", !"{W[29]+1}", "13:30-15:30", !"{W[29]+5}", "08:15-12:30", !"{W[30]+1}", "continue...",          "-", !"{W[29]+5}",
+  "remed3",   "Q2", !"{W[32]+1}", "13:30-17:30",          "-",          "-",           "-",           "-",          "-",          "-",
+  "A10",      "Q2", !"{W[35]+1}", "13:30-15:30", !"{W[35]+5}", "08:15-12:30", !"{W[36]+1}",  !"{W[36]+2}", !"{W[35]+5}",          "-"
+))
+rownames(learnitdown$mod) <- learnitdown$mod$id
+
+# Assignment URLS
+learnitdown$assign_url <- list(
+  # Q1
+  A00Qa_issues         = "https://classroom.github.com/a/...",
+  A01Ia_scatterplot    = "https://classroom.github.com/a/...",
+  A02Ia_distributions  = "https://classroom.github.com/a/...",
+  A02Ga_analysis       = "https://classroom.github.com/a/...",
+  A03Ia_graphe_avance  = "https://classroom.github.com/a/...",
+  A03Ca_charts         = "https://classroom.github.com/a/...",
+  A04Ia_transformation = "https://classroom.github.com/a/...",
+  A04Ga_biometry       = "https://classroom.github.com/a/...",
+  A05Ia_belgium_demo   = "https://classroom.github.com/a/...",
+  # Q2
+  A06Ia_correlation    = "https://classroom.github.com/a/...",
+  A07Ia_pea            = "https://classroom.github.com/a/...",
+  A07Ga_human          = "https://classroom.github.com/a/...",
+  A08Ia_ttest          = "https://classroom.github.com/a/...",
+  A09Ia_acidification  = "https://classroom.github.com/a/...",
+  A10Ia_anova2         = "https://classroom.github.com/a/...",
+  A10Ca_infer          = "https://classroom.github.com/a/..."
+)
+
+# Date and time for start and end of classes for each module
+class1_start <- function(x, module)
+  paste0(x[module, 'start'], " ", substring(x[module, 'class1'], 1, 5), ":00")
+class1_end <- function(x, module)
+  paste0(x[module, 'start'], " ", substring(x[module, 'class1'], 7, 11), ":00")
+class2_start <- function(x, module)
+  paste0(x[module, 'end'], " ", substring(x[module, 'class2'], 1, 5), ":00")
+class2_end <- function(x, module)
+  paste0(x[module, 'end'], " ", substring(x[module, 'class2'], 7, 11), ":00")
+n3_end <- function(x, module, hour = "23:59:59")
+  paste0(x[module, 'N3'], " ", hour)
+n4_end <- function(x, module, hour = "23:59:59")
+  paste0(x[module, 'N4'], " ", hour)
 
 # Examples:
 #!"svbox{svbox} is for academic year {acad_year}"
-#  -> svbox2024 is for academic year 2024-2025
-#microbenchmark::microbenchmark(!TRUE, .Primitive('!')(TRUE), .Primitive('!'))
+#  -> svbox2025 is for academic year 2025-2026
 
-# Unary + binary + is nice too, but it slows down additions!
-# We use glue() often for variables replacement from learnitdown, so, we
-# redefine the unary and binary `+` operators for character objects
-#`+` <- function(e1, e2) {
-#  if (missing(e2)) {# Unary operator
-#    if (inherits(e1, "character")) {
-#      glue::glue_data(learnitdown, e1)
-#    } else {# Usual + operator
-#      .Primitive("+")(e1)
-#    }
-#      glue::glue_data(learnitdown, e1)
-#  } else {# Binary operator
-#    if (inherits(e1, "character")) {
-#      glue::as_glue(paste0(e1, glue::glue_data(learnitdown, e2)))
-#    } else {# Usual + operator
-#      .Primitive("+")(e1, e2)
-#    }
-#  }
-#}
-# Examples:
-#+"svbox{svbox} is for academic year {acad_year}"
-#  -> svbox2024 is for academic year 2024-2025
-#+"svbox{svbox}" + " is for" + " academic year {acad_year}"
-#  -> same result
-# With the new R 4.0 character strings syntax:
-#+r"("{courses[1]}" est le cours de {courses_names[1]})"
-#  -> "S-BIOG-015" est le cours de Science des Données Biologiques II à l'UMONS
-# Date are better defined according to the academic calendar. So, W[1]+1 is
-# monday of first week and W[15]+5 is friday of last Q1 week
-#+"Q1 starts {W[1]+1} 08:15:00 and ends {W[15]+5} 17:45:00"
-#  -> Q1 starts 2021-09-13 08:15:00 and ends 2021-12-24 17:45:00
+# Link inside the courses: the link are a little bit more complex because the
+# bookdown is embedded in a Wordpress site. A direct link like:
+# https://wp.sciviews.org/sdd-umons2-2025/outils-de-diagnostic-suite.html#résumé-avec-summarysuite
+# becomes:
+# https://wp.sciviews.org/sdd-umons2/?iframe=wp.sciviews.org/sdd-umons2-2025/outils-de-diagnostic-suite.html%23résumé-avec-summarysuite
+course_link <- function(label, course = 1, page, anchor = "", year = !"{YYYY}",
+  baseurl = !"{baseurl}", course_page = "sdd-umons") {
+  if (course == 1) {
+    course <- ""
+  } else{
+    course <- as.character(course)
+  }
+  if (anchor != "")
+    anchor <- paste0("%23", anchor) # %23 is the URLencoded value of '#'
+  baseurl2 <- sub("https://", "", baseurl, fixed = TRUE) # Remove https://
+  url <- glue::glue("{baseurl}/{course_page}{course}/?iframe={baseurl2}/{course_page}{course}-{year}/{page}.html{anchor}")
+  paste0("[", label, "](", url, ")")
+}
+# ex.: course_link("diagnostic", 2, "outils-de-diagnostic-suite", "résumé-avec-summarysuite")
 
 ## Big images (animated gifs, ...) are stored externally, refer them this way:
 #
@@ -92,20 +143,20 @@ learnitdown <- list(
 #  assignment("A01Ia_markdown", part = NULL,
 #    url = "https://github.com/BioDataScience-Course/A01Ia_markdown",
 #    course.ids = c(
-#      'S-BIOG-015'         = +"A01Ia_{YY}M_markdown",
-#      'S-BIOG-937-958-959' = +"A01Ia_{YY}C_markdown",
-#      'late_mons'          = +"A01Ia_{YY}M_markdown"),
+#      'S-BIOG-015'         = !"A01Ia_{YY}M_markdown",
+#      'S-BIOG-937-958-959' = !"A01Ia_{YY}C_markdown",
+#      'late_mons'          = !"A01Ia_{YY}M_markdown"),
 #    course.urls = c(
-#      'S-BIOG-015'         = "https://classroom.github.com/a/...",
-#      'S-BIOG-937-958-959' = "https://classroom.github.com/a/...",
-#      'late_mons'          = "https://classroom.github.com/a/..."),
+#      'S-BIOG-015'         = !"{assign_url$A01Ia_markdownM}",
+#      'S-BIOG-937-958-959' = !"{assign_url$A01Ia_markdownC}",
+#      'late_mons'          = !"{assign_url$A01Ia_markdownM}"),
 #    course.starts = c(
-#      'S-BIOG-015'         = +"{W[1]+1} 08:00:00",
+#      'S-BIOG-015'         = !"{class1_start(mod, 'A01')}",
 #      'S-BIOG-937-958-959' = NA, # Nondefined date, or just ignore it
-#      'sdd1late'           = +"{W[1]+1} 08:00:00"),
+#      'sdd1late'           = !"{class2_start(mod, 'A01')}"),
 #    course.ends = c(
-#      'S-BIOG-015'         = +"{W[3]+5} 23:59:59",
-#      'sdd1late'           = +"{W[5]+5} 23:59:59"),
+#      'S-BIOG-015'         = !"{n3_end(mod, 'A01')}",
+#      'sdd1late'           = !"{n3_end(mod, 'A02')}"),
 #    term = "Q1", level = 3,
 #    toc = "Réalisation d'un premier document en Markdown")
 #```
