@@ -1,5 +1,5 @@
-# This bookdown in its version 2024 needs the following R packages
-#  R 4.3.3
+# This bookdown in its version 2025 needs the following R packages
+#  R 4.4.3
 # Use the following to list all dependencies:
 #imports <- unique(c("bookdown", "learnitdown", "SciViews",
 #  attachment::att_from_rmds(".")))
@@ -39,6 +39,9 @@ install.packages(c("knitr", "bookdown", # The bases!
 install.packages("broom.mixed", type = "source")
 
 # From Github (latest devel version)
+devtools::install_github("SciViews/svFast")
+devtools::install_github("SciViews/svTidy")
+devtools::install_github("SciViews/helpai")
 devtools::install_github("SciViews/svMisc")
 devtools::install_github("SciViews/svBase")
 devtools::install_github("SciViews/svFlow")
