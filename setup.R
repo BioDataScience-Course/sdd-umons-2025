@@ -40,7 +40,7 @@ learnitdown <- list(
 
 # Course start and end dates
 learnitdown$course_start <- !"{W[2]+1}"
-learnitdown$course_end   <- !"{W[35]+5}"
+learnitdown$course_end   <- !"{W[36]+2}"
 
 # Modules dates
 learnitdown$mod <- as.data.frame(tibble::tribble(

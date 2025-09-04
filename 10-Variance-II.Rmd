@@ -674,7 +674,7 @@ Dans tous les cas, une analyse des résidus, en particulier un graphique quantil
 
 ```{block, type='info'}
 
-Dans cette dernière section du module \@ref(variance2), nous revenons sur nos outils logiciels. C'est bien de connaître les techniques de visualisation et d'analyse des données, mais c'est encore mieux de pouvoir les appliquer en pratique... et pour cela il faut maîtriser un ou plusieurs logiciels. Nous avons utilisé principalement **[R](https://www.r-project.org)**, avec l'interface proposée par RStudio. Nous allons maintenant approfondir quelque peu nos connaissances en R.
+Dans cette dernière section du module 10, nous revenons sur nos outils logiciels. C'est bien de connaître les techniques de visualisation et d'analyse des données, mais c'est encore mieux de pouvoir les appliquer en pratique... et pour cela il faut maîtriser un ou plusieurs logiciels. Nous avons utilisé principalement **[R](https://www.r-project.org)**, avec l'interface proposée par RStudio. Nous allons maintenant approfondir quelque peu nos connaissances en R.
 
 ```
 
