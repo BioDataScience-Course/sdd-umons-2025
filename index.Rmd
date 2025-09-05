@@ -19,7 +19,7 @@ description: "Cours interactif pour la science des données avec R & SciViews-R 
 cover-image: "images/front-cover.png"
 ---
 
-# Préambule {.unnumbered}
+# Préambule {#preambule .unnumbered}
 
 ```{r setup, include=FALSE}
 knitr::write_bib(c(.packages(), 'bookdown', 'knitr', 'rmarkdown'), 'packages.bib')
@@ -47,7 +47,7 @@ sessioninfo::session_info()
 
 </details>
 
-## Vue générale du cours {.unnumbered}
+## Vue générale du cours {#vuegenerale .unnumbered}
 
 Cet ouvrage est le premier d'une série de trois volumes traitant de la science des données biologiques. L'écriture de cette suite de livres a débuté au cours de l'année académique 2018-2019. Pour l'année académique `r !'{acad_year}'`, ceci est le support du cours de `r !'[Science des données I : visualisation et inférence](https://webcontent.umons.ac.be/web/fr/pde/{acad_year}/ue/US-B2-SCBIOL-006-M.htm)'` au second Bachelier en Biologie en Faculté des Sciences de l'Université de Mons (UMONS), et dont le responsable est Philippe Grosjean.
 
@@ -57,7 +57,7 @@ Les cinq premiers modules au premier quadrimestre vous font découvrir les logic
 
 Les cinq modules suivants au second quadrimestre s'attaquent à l'**inférence** statistique, c'est-à-dire, l'art de tirer des conclusions sur l'observation d'un phénomène biologique au travers d'un échantillon, en présence d'incertitude, de variation entre individus et d'erreur de mesure qui sont impossible à éviter en biologie. Il s'agit ici d'utiliser de manière correcte les tests d'hypothèses statistiques et de réaliser des analyses de données reproductibles.
 
-## Matériel pédagogique {.unnumbered}
+## Matériel pédagogique {#pedagogie .unnumbered}
 
 Le matériel pédagogique est aussi varié que possible. Vous pourrez ainsi piocher dans l'offre en fonction de vos envies et de votre profil d'apprenant pour optimiser votre travail. Vous trouverez :
 
@@ -97,7 +97,7 @@ Pour annoter ou surligner, vous sélectionnez du texte et vous cliquez sur l'un 
 :::
 ```
 
-## Comment apprendre ? {.unnumbered}
+## Comment apprendre ? {#commentapprendre .unnumbered}
 
 ```{r}
 fortunes::fortune("brain surgery")
@@ -121,7 +121,7 @@ S'il vous semble que votre méthode de travail ou votre motivation n'est pas opt
 vembedr::embed_youtube("u6ks5OCQR9I", width = 770, height = 433)
 ```
 
-## Approche pédagogique {.unnumbered}
+## Approche pédagogique {#approchepedagogique .unnumbered}
 
 Ce livre en ligne ainsi que tout le matériel pédagogique cité plus haut ont été développés pour être employés en pédagogie active en classe inversée. On peut résumer cette approche en deux phases. Vous apprenez d'abord à la maison, nous appliquons *ensuite* en présentiel.
 

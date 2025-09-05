@@ -252,7 +252,7 @@ Vous découvrez sans doute que les graphiques réalisables avec R sont modulable
 
 `r learnr("A02Lb_univariate", title = "Graphiques univariés", toc = "Graphiques univariés")`
 
-## Graphique de densité
+## Graphique de densité {#densite}
 
 L'histogramme n'est pas le seul outil à votre disposition. Vous pouvez également utiliser le **graphique de densité** qui se présente un peu comme un histogramme lissé. Le passage d'un histogramme vers un graphe de densité se base sur une **estimation par noyau gaussien**[^02-visualisation-ii-7]
 
@@ -523,7 +523,7 @@ if (exists("assignment2"))
     toc = "Analyse de données (partie I, par groupe de 4)")
 ```
 
-## Récapitulatif des exercices
+## Récapitulatif des exercices {#recapitulatifa02}
 
 Ce module 2 vous a permis de réaliser différents graphiques uni- et bivariés afin de visualiser la *distribution* de variables quantitatives seules ou en fonction des niveaux d'une variable qualitative (facteur). Pour évaluer votre compréhension de cette matière, vous aviez les exercices suivants à réaliser :
 

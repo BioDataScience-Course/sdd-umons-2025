@@ -641,7 +641,7 @@ chart(data = tooth_growth, len ~ supp %fill=% dose) +
 
 -   [Explication plus détaillée sur les cinq nombres](https://chemicalstatistician.wordpress.com/2013/08/12/exploratory-data-analysis-the-5-number-summary-two-different-methods-in-r-2/), en anglais.
 
-## Figures composées
+## Figures composées {#figurescomposees}
 
 Il arrive fréquemment de vouloir combiner plusieurs graphiques dans une même figure. Plusieurs fonctions sont à votre disposition pour cela. Il faut tout d'abord distinguer deux types de figures multigraphiques :
 
@@ -726,7 +726,7 @@ if (exists("assignment"))
 -   [Site du package {patchwork}](https://patchwork.data-imaginist.com). Une façon puissante et intuitive de réaliser des graphiques composites dans R.
 
 
-## Différents moteurs graphiques
+## Différents moteurs graphiques {#moteursgraphiques}
 
 <center>
 
@@ -1044,7 +1044,7 @@ Vous pouvez soumettre vos résultats pendant une période de temps précise via 
 `r launch_shiny("https://sdd.umons.ac.be/A03Ca_charts/", height = 800, delay = 20, toc = NULL, alt1 = "*Cliquez pour visualiser le classement.*", alt2 = "*Cliquez pour visualiser le classement.*")`
 :::
 
-## Récapitulatif des exercices
+## Récapitulatif des exercices {#recapitulatifa03}
 
 Ce module 3 vous a permis de réaliser et de découvrir de nouveaux graphiques. Vous savez maintenant réaliser des graphiques en barres, des graphiques en camembert et des boites à moustaches. Vous êtes aussi capable de réaliser des graphiques composés. Pour évaluer votre compréhension de cette matière, vous aviez les exercices suivants à réaliser :
 

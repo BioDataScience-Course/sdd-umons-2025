@@ -720,7 +720,7 @@ Une des raisons pour lesquelles la distribution normale est très répandue est 
 vembedr::embed_youtube("4dhm2QAA2x4", width = 770, height = 433)
 ```
 
-## Corrélation
+## Corrélation {#correlation}
 
 ### Association de deux variables
 
@@ -1019,7 +1019,7 @@ correlation(trees) # Équivalent à method = "pearson"
 
 Les valeurs obtenues diffèrent, mais les tendances restent similaires ici. Les différences sont d'autant plus importantes que le nuage de points est curvilinéaire. À vous de bien choisir votre coefficient en fonction de ce que vous recherchez, une association linéaire (Pearson) ou pas (Spearman, le plus utilisé, ou Kendall éventuellement).
 
-## Test de corrélation
+## Test de corrélation {#testcorrelation}
 
 C'est bien beau de pouvoir quantifier une corrélation, mais à partir de quand est-elle *significative* au sens statistique du terme ? En d'autres termes, nous voudrions déterminer si l'allongement du nuage de points peut être fortuit (par le biais de l'échantillonnage aléatoire) ou non. Il existe un test d'hypothèse qui répond à cette question. La section suivante traite de l'échantillonnage, du travail préliminaire ainsi que la définition d'un test d'hypothèse.
 
@@ -1156,7 +1156,7 @@ if (exists("assignment"))
 ```
 
 
-## Récapitulatif des exercices
+## Récapitulatif des exercices {#recapitulatifa06}
 
 Vous venez de terminer le module six. Ce module vous a permis d'apprendre les bases des probabilités, de découvrir les premières lois de distributions, la corrélation et les premiers éléments concernant les tests d'hypothèse. Pour évaluer votre compréhension de cette matière, vous aviez les exercices suivants à réaliser :
 

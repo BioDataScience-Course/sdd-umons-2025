@@ -20,7 +20,7 @@ SciViews::R("infer", "model", lang = "fr")
 
 Ce module continue la comparaison de moyennes entamée, pour deux populations, au module \@ref(moyenne). Assurez-vous d'avoir bien compris le test *t* de Student et les subtilités des tests d'hypothèse avant d'entamer la présente section.
 
-## Le danger des tests multiples
+## Le danger des tests multiples {#testsmultiples}
 
 Avant toute chose, nous préparons notre session R. Nous avons besoin de `SciViews::R` bien entendu, mais aussi des extensions `"infer"` et `"model"`. Tout cela est chargé en mémoire comme suit (n'oubliez pas ces codes dans un "chunk" de "setup" en début de vos documents Quarto ou R Markdown) :
 
@@ -112,7 +112,7 @@ Nous allons donc travailler différemment... Ci-après nous verrons qu'une simpl
 
 `r h5p(229, height = 270, toc = "Comparaison deux à deux")`
 
-## ANOVA à un facteur
+## ANOVA à un facteur {#anovaunfacteur}
 
 Au lieu de nous attaquer aux comparaisons deux à deux, nous pouvons considérer une hypothèse unique que les moyennes de $k$ populations (nos quatre groupes différents de crabes, par exemple) sont toutes égales. L'hypothèse alternative sera qu'au moins une des moyennes diffère des autres (sans préciser laquelle). En formulation mathématique, cela donne :
 
@@ -455,7 +455,7 @@ Cette distribution s'éloigne un peu aux extrêmes de la distribution normale. N
 
 -   Explication de l'analyse de variance en détaillant le calcul par la Kahn Academy. [Partie I](https://www.youtube.com/watch?v=tjolTrwJhjM), [partie II](https://youtu.be/DMo9yofC5C8) et [partie III](https://youtu.be/y8nRhsixBPs). Assez long : près de 3/4h en tout. Ne regardez que si vous n'avez pas compris ce que sont les sommes des carrés.
 
-## Test "post-hoc"
+## Test "post-hoc" {#testpothoc}
 
 Avec l'ANOVA, lorsque nous rejetons $H_0$ comme dans le cas de notre exemple, nous savons qu'il y a au moins deux moyennes qui diffèrent l'une de l'autre, mais nous ne savons toujours pas lesquelles à ce stade. Notre analyse n'est pas terminée. Nous allons revisiter les tests de comparaison multiples deux à deux, mais en prenant des précautions particulières pour éviter l'inflation du risque d'erreur.
 
@@ -607,7 +607,7 @@ if (exists("assignment2"))
 ```
 
 
-## Récapitulatif des exercices
+## Récapitulatif des exercices {#recapitulatifa09}
 
 Vous venez de terminer le module 9. Ce module vous a permis d'apprendre une grande partie des subtilités qui se cachent derrière l'analyse de variance. Pour évaluer votre compréhension de cette matière, vous aviez les exercices suivants à réaliser :
 

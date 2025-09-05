@@ -18,7 +18,7 @@ SciViews::R(lang = "fr")
 
 Ce module est la continuation du module \@ref(import) dont le contenu doit être bien compris et maîtrisé avant de poursuivre ici.
 
-## Tableaux de données
+## Tableaux de données {#tableaudonnees}
 
 Les tableaux de données sont principalement représentés sous deux formes : les tableaux **cas par variables** et les tableaux de **contingence**.
 
@@ -405,7 +405,7 @@ Par exemple, vous voulez comparer des prélèvements sanguins faits sur une popu
 
 Dans ce cas, si vous effectuez un échantillonnage aléatoire de 100 patients ou même de 1.000 patients hospitalisés, vous avez toutes les chances de ne même pas inclure un seul patient atteint de l'infection dans votre échantillon ! Ici l'échantillonnage stratifié est utile. Il consiste à séparer les patients en deux sous-populations : ceux qui sont atteints et les autres. Ensuite, vous décidez, par exemple, d'analyser 50 prélèvements sanguins dans chacune des deux sous-populations. Vous échantillonnez alors 50 patients aléatoirement comme nous l'avons fait plus haut pour nos souris, mais à l'intérieur de chaque sous-population. Au final, votre échantillon contiendra alors 50 patients infectés et 50 autres qui ne le sont pas. Cet échantillon est également représentatif (sauf, bien sûr, concernant la prévalence de l'infection que nous ne pouvons plus calculer à partir de ce type d'échantillon).
 
-## Acquisition de données
+## Acquisition de données {#acquisition}
 
 Dans le module \@ref(import), vous avez pris connaissance des types de variable et venez d'apprendre comment encoder différents types de tableaux de données et leur associer les indispensables métadonnées. Cependant, la première étape avant d'acquérir des données est de planifier correctement son expérience. La science des données est intimement liée à la démarche scientifique et intervient dans toutes les étapes depuis la caractérisation de la question et le planning de l'expérience jusqu'à la diffusion des résultats. Plus en détail, cela correspond à :
 
@@ -829,7 +829,7 @@ if (exists("assignment2"))
 
 -   Le chapitre relatif aux [jointures de **R for Data Science (2e)**](https://r4ds.hadley.nz/joins.html) contient divers exemples de transformation des données à partir d'un ou plusieurs tableaux et présente aussi d'autres formes de jointures.
 
-## Récapitulatif des exercices
+## Récapitulatif des exercices {#recapitulatifa05}
 
 Vous venez de terminer le module 5 qui clôture la première partie du cours. Ce module vous a permis d'apprendre à présenter correctement des données (cas par variables ou tableau de contingence), à planifier vos mesures et préparer votre échantillonnage, à recombiner, remodeler et fusionner des tableaux. Pour évaluer votre compréhension de cette matière, vous aviez les exercices suivants à réaliser :
 

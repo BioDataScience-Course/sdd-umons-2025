@@ -24,7 +24,7 @@ SciViews::R("infer", lang = "fr")
 
 Ce module est élaboré sur les notions de probabilité, de loi de distribution statistique et de test d'hypothèse abordées dans les deux modules précédents \@ref(probacorr) et \@ref(districhi2). La matière de ces deux modules doit donc être maîtrisée avant d'aller plus avant ici.
 
-## Une histoire de bière...
+## Une histoire de bière... {#histoiredebiere}
 
 Les Belges, c'est connu, apprécient la bière. Mais ils ne sont pas les seuls, et c'est très heureux ! Car c'est en effet grâce à un certain William Sealy Gosset, brasseur et statisticien (et oui, ça ne s'invente pas) que l'un des tests d'hypothèses des plus utilisés en biologie a vu le jour : le test de "Student" qui permet de comparer des moyennes.
 
@@ -40,7 +40,7 @@ vembedr::embed_youtube("GFzCIA9kppM", width = 770, height = 433)
 
 Le contrat que Gosset a signé avec son employeur l'empêchait de publier des résultats scientifiques sous son vrai nom. Ainsi, il décida de publier sa trouvaille qui occupe aujourd'hui une place très importante en statistiques sous le pseudonyme de "Student" (l'étudiant). Ce n'est qu'à sa mort, en 1937, que l'on put révéler le nom de l'auteur qui fut derrière cette fantastique découverte. Mais au fait, de quoi s'agit-il exactement ? Nous allons l'expliquer dans la section suivante.
 
-## Distribution d'échantillonnage
+## Distribution d'échantillonnage {#distributionechantillonnage}
 
 Pour rappel, nous faisons de l'**inférence** sur base d'un échantillon parce que nous sommes incapables de mesurer tous les individus d'une population. Il faut au préalable que l'échantillon soit **représentatif**, donc réalisé dans les règles de l'art (par exemple, un échantillonnage aléatoire simple de la population). Nous pouvons calculer la moyenne d'un échantillon facilement (eq. \@ref(eq:moyenne)).
 
@@ -331,7 +331,6 @@ $$\mathrm{IC}(1 - \alpha) \simeq \bar{x} \pm t_{\alpha/2}^{n-1} \cdot \frac{s_x}
 
 ```{block, type='note'}
 Étant donné l'importance que revêt $\frac{s_x}{\sqrt{n}}$, nous appellerons cette quantité **erreur standard** de *x* et nous la noterons $SE_x$.
-
 ```
 
 Nous pouvons tout aussi bien écrire :
@@ -440,7 +439,7 @@ L'IC sera pertinent si :
     -   est approximativement normale, l'IC sera approximativement exact,
     -   est non normale, l'IC sera approximativement exact si $n$ est grand.
 
-## Test *t* de Student
+## Test *t* de Student {#studentt}
 
 Nous allons également pouvoir utiliser la distribution *t* de Student comme distribution de référence pour comparer une moyenne par rapport à une valeur cible ou pour comparer deux moyennes. C'est le test *t* de Student... ou plutôt *les* tests de Student puisqu'il en existe plusieurs variantes.
 
@@ -623,7 +622,7 @@ Vous pouvez également comparer les crabes bleus (`species = "B"`) avec les crab
 
 `r learnr("A08La_ttest", title = "Moyenne et test t de Student", toc = "Moyenne et test t de Student")`
 
-## Variantes du test *t* de Student
+## Variantes du test *t* de Student {#studenttvariantes}
 
 Nous venons de voir ce qu'on appelle très précisément le **test *t* de Student indépendant bilatéral avec variances égales**. Nous allons maintenant étudier d'autres variantes.
 
@@ -968,7 +967,7 @@ La puissance est de 0,954. Donc, $\beta$ vaut 1 - 0,954 = 0,046 ou pratiquement 
 
 `r learnr("A08Lb_ttest_wmw", title = "Tests de Student et de Wilcoxon/Mann-Whitney", toc = "Tests de Student et de Wilcoxon/Mann-Whitney")`
 
-## Représentation graphique
+## Représentation graphique {#representationgraphique}
 
 Il n'existe pas un graphique de référence pour présenter un test *t* de Student ou un test de Wilcoxon. On retrouve malheureusement dans la littérature plusieurs graphiques qui coexistent. Afin de présenter trois graphiques courants, nous utilisons le jeu de données `crabs`.
 
@@ -1113,7 +1112,7 @@ if (exists("assignment2"))
 ```
 
 
-## Récapitulatif des exercices
+## Récapitulatif des exercices {#recapitulatifa08}
 
 Vous venez de terminer le module 8. Ce module vous a permis d'apprendre une grande partie des subtilités qui se cachent derrière la moyenne qui peut nous sembler si simple. Il nous a aussi inité aux tests de Student et de Wilcoxon-Mann-Withney. Pour évaluer votre compréhension de cette matière, vous aviez les exercices suivants à réaliser :
 

@@ -94,7 +94,7 @@ La rédaction de travaux s'appuie toujours sur une recherche bibliographique au 
 
 -   Pour générer correctement ses références bibliographiques dans un document R Markdown/R Notebook, [consulter ceci](https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html). Pour un document Quarto, [lisez ceci](https://quarto.org/docs/authoring/citations.html). Il s'agit de manuels en anglais qui expliquent comment encoder sa bibliographie et comment la citer dans le texte à l'aide de balises Markdown spécifiques.
 
-## Nom des espèces
+## Nom des espèces {#nomdespeces}
 
 Le nom complet d'une espèce en biologie suit une convention particulière, propre à la [nomenclature binomiale de Linné](https://www.herodote.net/Un_Suedois_fait_le_menage_dans_la_Nature-synthese-212.php) que vous devez utiliser dans tous vos travaux. Partons de l'exemple de l'oursin violet. Il s'agit ici du **nom vernaculaire** en français. Mais ce nom n'est pas assez précis pour être utilisé seul dans un travail scientifique. En effet, le nom vernaculaire d'une espèce change d'une langue à l'autre. Il peut aussi varier d'une région géographique à l'autre, ou pire, il peut désigner des espèces différentes selon les endroits. Seul le **nom latin** fait référence ! Une espèce est classée de la manière suivante (les niveaux de classification les plus importants sont mis en gras) :
 

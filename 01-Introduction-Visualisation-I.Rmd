@@ -693,7 +693,7 @@ Vous pouvez également accéder à cet espace de discussion depuis n'importe que
 
 Il est possible de faire appel à une communauté bien plus grande, mais nous en resterons là pour ce premier module.
 
-## Récapitulatif des exercices
+## Récapitulatif des exercices {#recapitulatifa01}
 
 Bravo ! Vous arrivez au bout de votre premier module. Cette dernière section vous permet de vérifier que vous avez bien réalisé tous les exercices et de contrôler votre progression telle qu'enregistrée dans notre base de données (étudiants UMONS uniquement). Vous aviez à réaliser les exercices suivants :
 

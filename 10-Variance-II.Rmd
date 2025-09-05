@@ -16,7 +16,7 @@ SciViews::R("infer", "model", lang = "fr")
 
 Ce module présente la suite de l'ANOVA initiée au module \@ref(variance). Vous devez avoir bien compris l'ANOVA à un facteur avant d'entamer le présent chapitre.
 
-## ANOVA à deux facteurs
+## ANOVA à deux facteurs {#anovadeuxfacteurs}
 
 Dans le cadre de l'ANOVA à un facteur, nous avions une variable réponse numérique étudiée pour différents niveaux d'*une seule* variable facteur à *j* niveaux ou modalités. Le modèle utilisé était :
 
@@ -36,7 +36,7 @@ Si nous prenons notre exemple des crabes *L. variegatus*, nous avions travaillé
 
 Les sections suivantes vous présentent quelques variantes possibles de cette analyse.
 
-## Modèle sans interactions
+## Modèle sans interactions {#anovasansinteractions}
 
 La version la plus simple consiste à considérer deux facteurs *successivement*, c'est-à-dire que la variance est décomposée d'abord selon le premier facteur, et ensuite selon le second.
 
@@ -161,7 +161,7 @@ Encore une fois, nous voyons que les résidus sont quasiment les mêmes que pré
 -   **homoscédasticité** (mêmes variances intragroupes),
 -   pas d'**interactions** entre les deux variables explicatives.
 
-## Modèle croisé complet
+## Modèle croisé complet {#anovacomplete}
 
 Le modèle ANOVA que nous venons de faire s'appelle un **modèle croisé** parce que les mesures sont effectuées pour chaque combinaison des niveaux des deux variables facteurs explicatives, et ce, de manière indépendante (les observations d'un niveau ne sont pas dépendantes de celles d'un autre niveau)[^10-variance-ii-2].
 
@@ -239,7 +239,7 @@ if (exists("assignment"))
     toc = "ANOVA 2 facteurs, part I")
 ```
 
-## Facteurs hiérarchisés
+## Facteurs hiérarchisés {#anovahierarchisee}
 
 Nous n'avons pas toujours la possibilité de croiser les deux facteurs. Considérons le cas d'une étude d'intercalibration. Nous avons un ou plusieurs échantillons répartis entre plusieurs laboratoires, et comme les analyses dépendent éventuellement aussi du technicien qui fait la mesure, nous demandons à chaque laboratoire de répéter les mesures avec deux de leurs techniciens. Problème : ici, il s'agit bien évidemment de techniciens *différents* dans chaque laboratoire. Comment faire, sachant que pour le modèle croisé, il faudrait que les deux *mêmes* techniciens aient fait toutes les mesures *dans tous* les laboratoires ?
 
@@ -368,7 +368,7 @@ Si nous avions quatre techniciens par labo qui avaient tous dosé les échantill
 Les conditions d'application sont les mêmes que pour l'ANOVA à deux facteurs sans interactions, sauf qu'ici, les interactions sont bien évidemment incluses dans le modèle par construction.
 
 
-## Effet aléatoire
+## Effet aléatoire {#effetsaleatoires}
 
 Jusqu'à présent, nous avons considéré que nous échantillonnons toutes les modalités qui nous intéressent pour les variables facteurs explicatives. Il se peut que les modalités soient trop nombreuses et que nous ne puissions n'en étudier qu'une petite fraction. Nous avons deux possibilités.
 
@@ -1052,7 +1052,7 @@ Vous pouvez soumettre vos résultats pendant une période de temps précise via 
 :::
 
 
-## Récapitulatif des exercices
+## Récapitulatif des exercices {#recapitulatifa10}
 
 À l'issue de ce module 10 vous avez appris à utiliser l'ANOVA à deux facteurs sous différentes formes, vous avez aussi approfondi votre maîtrise de R à travers l'indiçage et les principaux styles syntaxiques de R.
 

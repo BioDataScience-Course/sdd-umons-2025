@@ -44,7 +44,7 @@ La première chose à vérifier à l'ouverture du tutoriel interactif est le nom
 
 Si vous êtes correctement enregistré, un bandeau bleu l'indiquera avec votre login GitHub en gras comme ci-dessus. Dans le cas contraire, un message sur fond jaune ou rouge (selon le contexte) indiquera le contraire. De même, si vous voyez également un message sur fond rouge qui indique que la base de données est inaccessible, cela signifie que vous n'êtes pas correctement connecté à l'Internet ou que votre connexion Internet ne permet *pas* d'accéder à la base de données qui enregistre votre activité. Essayez un autre réseau, ou même, essayez en redémarrant complètement votre ordinateur (ou la machine virtuelle sur le cloud). Si la base de données est actuellement inaccessible, vous pouvez toujours effectuer les exercices, mais votre activité sera temporairement enregistrée localement dans votre ordinateur. Dès la prochaine connexion fructueuse, et dès la soumission d'un exercice learnr, l'ensemble de votre activité sera alors enregistrée d'un coup dans la base de données.
 
-## Organisation d'un learnr
+## Organisation d'un learnr {#learnrorganisation}
 
 Le learnr est un outil pédagogique mis au point pour proposer des tutoriels interactifs comprenant des illustrations, des questions à choix multiples, des exercices R... Les learnr qui vous seront proposés tout au long de votre formation en Science des Données biologiques seront composés de la manière suivante :
 

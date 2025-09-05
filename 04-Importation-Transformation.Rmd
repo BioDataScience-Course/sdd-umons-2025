@@ -18,7 +18,7 @@ SciViews::R
 
 Le contenu du module \@ref(introvisu) doit être parfaitement maîtrisé. Il est également souhaitable, mais pas indispensable, de comprendre comment réaliser des graphiques dans R pour pouvoir comprendre le contenu de ce module.
 
-## Importation des données
+## Importation des données {#importation}
 
 Il est possible d'encoder de très petits jeux de données directement dans R. La fonction `dtx_rows()` permet de le faire facilement. Notez que les noms des colonnes du tableau sont à rentrer sous forme de **formules** (`~var`), que chaque entrée est séparée par une virgule, et que les chaînes de caractères sont entourées de guillemets. Les espaces sont optionnels et peuvent être utilisés pour aligner les données afin que le tout soit plus lisible. Des commentaires peuvent être utilisés éventuellement en fin de ligne (un dièse `#` suivi du commentaire).
 
@@ -454,7 +454,7 @@ table(iris20$species)
 
 ```
 
-## Remaniement des données
+## Remaniement des données {#remaniement}
 
 Dans le module \@ref(visu3), vous avez réalisé vos premiers remaniements de données dans le cadre des graphiques en barres. Nous ne nous sommes pas étendus sur les fonctions utilisées à cette occasion. Le **remaniement des données est une étape cruciale en analyse des données** et il faut en maîtriser au moins les principaux outils. Heureusement, il est déjà possible d'aller loin en combinant une petite dizaine d'outils simples. Les cinq principaux (les plus utilisés) dans l'approche [Tidyverse](https://www.tidyverse.org) utilisée ici sont :
 
@@ -932,7 +932,7 @@ Notez bien aussi les fonction `fn()` et `fnobs()` que nous avons vues pour énum
 
 -   N'oubliez pas les [aide-mémoires](https://posit.co/resources/cheatsheets/) de {dplyr} et de {tidyr} qui forment aussi une source d'inspiration utile pour vous guider vers les fonction (les "verbes") adéquats. Ensuite, allez voir l'aide en ligne de la fonction avec `?ma_fonction`.
 
-## Chaînage des instructions
+## Chaînage des instructions {#chainage}
 
 Le chaînage (ou *"pipe"* en anglais, prononcez "païpe") permet de combiner une suite d'instructions R. Il permet une représentation facilement lisible et compréhensible d'un traitement décomposé en plusieurs étapes simples de remaniement des données.
 
@@ -1080,7 +1080,7 @@ if (exists("assignment2"))
 
 -   [Section sur le pipe dans "R for Data Science second edition"](https://r4ds.hadley.nz/data-transform.html#sec-the-pipe) expliquant l'utilisation du pipe de R de base et de {magrittr}.
 
-## Récapitulatif des exercices
+## Récapitulatif des exercices {#recapitulatifa04}
 
 Le module 4 que vous venez de terminer vous a permis d'apprendre à importer des données depuis différents formats et sources grâce à la fonction `read()` et de transformer un tableau de données ou le résumez à l'aide des fonctions tidy, speedy et fstat. Pour évaluer votre compréhension de cette matière vous aviez les exercices suivants à réaliser :
 
