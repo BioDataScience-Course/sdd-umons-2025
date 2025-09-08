@@ -542,7 +542,7 @@ if (exists("assignment"))
     toc = "Génétique mendélienne")
 ```
 
-#### Test Chi^2^ d'indépendance
+#### Test Chi^2^ d'indépendance {#chi2independance}
 
 Dans le cas d'un tableau de contingence à **double entrée**, qui croise les niveaux de deux variables qualitatives, nous pouvons effectuer également un test $\chi^2$. Celui-ci est calculé légèrement différemment et surtout, les hypothèses testées sont différentes.
 

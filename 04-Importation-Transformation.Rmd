@@ -273,7 +273,7 @@ Lors de la réalisation de graphiques dans les modules précédents, vous avez c
 
 La Figure \@ref(fig:two-boxplots) montre deux boites à moustaches parallèles différentes. Laquelle de ces deux représentations est incorrecte et pourquoi ?
 
-```{r two-boxplots, fig.cap="Boites à moustaches parallèles de la taille (`height`) en fonction de A. une variable qualitative (`gender`) et B. une variable quantitative (`weight`) et couleur en fonction de gender`"}
+```{r two-boxplots, warning=FALSE, fig.cap="Boites à moustaches parallèles de la taille (`height`) en fonction de A. une variable qualitative (`gender`) et B. une variable quantitative (`weight`) et couleur en fonction de gender`"}
 a <- chart(biometry, height ~ gender %fill=% gender) +
   geom_boxplot() 
 
@@ -967,7 +967,7 @@ knitr::kable(
     median = fmedian(bmi),
     number = fn(bmi)),
   rows = NULL,  digits = 1,
-  col = c("Genre", "Moyenne", "Médiane", "Observations"),
+  col.names = c("Genre", "Moyenne", "Médiane", "Observations"),
   caption = "IMC d'hommes (M) et femmes (W) de 25 ans maximum."
 )
 ```
@@ -983,7 +983,7 @@ biometry_tab <- ssummarise(biometry_25,
   median = fmedian(bmi),
   number = fn(bmi))
 knitr::kable(biometry_tab, rows = NULL, digits = 1,
-  col = c("Genre", "Moyenne", "Médiane", "Observations"),
+  col.names = c("Genre", "Moyenne", "Médiane", "Observations"),
   caption = "IMC d'hommes (M) et femmes (W) de 25 ans maximum.")
 ```
 
@@ -1002,7 +1002,7 @@ biometry %>.%
     number = fn(bmi)) ->
   biometry_tab
   knitr::kable(biometry_tab, rows = NULL, digits = 1, 
-    col = c("Genre", "Moyenne", "Médiane", "Observations"),
+    col.names = c("Genre", "Moyenne", "Médiane", "Observations"),
     caption = "IMC d'hommes (M) et femmes (W) de 25 ans maximum.")
 ```
 

@@ -164,7 +164,7 @@ Les notes des exercices plus faciles de niveau 1, 2 et 3 sont comptabilisées s�
 L'évaluation est **continue** tout au long de l'année. Il n'y a pas d'examen en fin d'année et il n'y a pas moyen non plus de repasser un examen en seconde session. La présence aux séances est **obligatoire** pour cette raison et toute absence injustifiée vous coûtera un zéro pour la matière concernée.
 ```
 
-### Plan du cours {.unnumbered}
+### Plan du cours {#plancours .unnumbered}
 
 Le plan du cours est une forme de contrat entre les étudiants et les enseignants. Ce document structure les attentes de vos encadrants. Veuillez consulter ce document attentivement.
 
@@ -212,7 +212,7 @@ Vous pouvez aussi directement créer une issue depuis RStudio. Voyez le fichier 
 
 `r h5p(134, height = 270, toc = "Adresse mail pour l'aide sur le cours")`
 
-## Planning des séances {#temps .unnumbered}
+## Planning des séances {#planning .unnumbered}
 
 | Module             | Préparation pour le ... | Fin N1-N3            | Projet N4                | Challenge                       | Interrogation              |
 |:-------------------|:------------------------|:---------------------|:-------------------------|:--------------------------------|:---------------------------|

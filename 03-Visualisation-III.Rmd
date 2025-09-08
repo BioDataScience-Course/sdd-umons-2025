@@ -675,7 +675,7 @@ Vous observez que les échelles en abscisse et en ordonnée sont similaires sur 
 
 La fonction `combine_charts()` permet de combiner plusieurs graphiques dans une figure unique. Nous l'avons déjà utilisée à plusieurs reprises. Cette fonction attend une liste (`list()`) de graphiques de type `chart()` à assembler, et il est possible d'en combiner les légendes à l'aide de `common.legend = TRUE`.
 
-```{r combine-charts, fig.cap= "A) Masse d'oursins en fonction de leur taille  et de leur origine. B) Masse totale en fonction de la masse des parties solides de ces mêmes oursins."}
+```{r combine-charts, warning=FALSE, fig.cap= "A) Masse d'oursins en fonction de leur taille  et de leur origine. B) Masse totale en fonction de la masse des parties solides de ces mêmes oursins."}
 # Importation des données
 urchin <- read("urchin_bio", package = "data.io", lang = "FR")
 # Réalisation des graphiques

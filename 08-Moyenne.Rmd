@@ -954,7 +954,7 @@ Mais au fait, c'est quoi la "puissance" d'un test d'hypothèse ? Considérons l
 
 L'erreur de première espèce (*type I error* en anglais) est associée au risque $\alpha$. L'erreur de seconde espèce (*type II error* en anglais) est associée au risque $\beta$. Plus $\beta$ est petit, plus le test est puissant. La puissance est $1 - \beta$. La puissance d'un test peut se calculer à l'aide des fonctions `pwr.xxx()` du package {pwr}. Par exemple dans le test *t* univarié concernant `med1` nous ferons :
 
-```{r}
+```{r, warning=FALSE}
 pwr::pwr.t.test(n = 10, d = 1.3, sig.level = 0.05,
   type = "one.sample", alternative = "two.sided")
 ```

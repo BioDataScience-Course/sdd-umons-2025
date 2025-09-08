@@ -862,13 +862,13 @@ Voyez la page d'aide de `correlation()` pour plus d'information via `?correlatio
 
 Il existe aussi des représentations graphiques spécialisées, appelées **corrélogrammes** pour visualiser les coefficients de corrélations dans un cas multivarié. La fonction `plot()` appliquée à notre objet **Correlation** en offre une version simple.
 
-```{r}
+```{r, warning=FALSE}
 plot(trees_cor)
 ```
 
 La matrice est représentée par des ellipses de plus en plus allongées au fur et à mesure que *r* se rapproche de 1. Une couleur bleue est utilisée pour les corrélations positives et une couleur rouge pour les corrélations négatives (mais vous pouvez aussi choisir d'autres couleurs). Ici, toutes les corrélations sont positives. Sur le jeu de données zooplancton, nous pouvons réaliser un corrélogramme plus intéressant qui illustre mieux la diversité de cette représentation graphique. Considérons, à titre d'exemple, les variables contiguës `size` jusqu'à `density` (que l'on peut indiquer par `size:density` dans un `sselect()`) :
 
-```{r}
+```{r, warning=FALSE}
 zoo <- read("zooplankton", package = "data.io")
 zoo %>.%
   sselect(., size:density) %>.%
@@ -879,7 +879,7 @@ plot(zoo_cor)
 
 Vous noterez que les variables `elongation` et `compactness` sont redondantes (*r* = 1). De plus, les données le long de la diagonale et sur le triangle supérieur n'apportent rien. Nous pouvons aussi bien décider de ne représenter que le triangle inférieur sur notre corrélogramme en ajoutant un argument `type = "lower"`.
 
-```{r}
+```{r, warning=FALSE}
 plot(zoo_cor, type = "lower")
 ```
 
@@ -1118,15 +1118,25 @@ cor.test(data = trees, ~ diameter + height, alternative = "greater") |> tabulari
 Elle est, elle aussi, significative au seuil $\alpha$ de 5%. La valeur *p* vaut ici un peu plus de 0,1%. Que donnerait un test de Spearman sur ces mêmes variables ?
 
 ```{r}
-cor.test(data = trees, ~ diameter + height,
-  alternative = "greater", method = "spearman") |> tabularise()
+trees_cor_test <- cor.test(data = trees, ~ diameter + height,
+  alternative = "greater", method = "spearman")
 ```
 
-R nous avertit qu'en présence d'ex æquo, le calcul n'est qu'approchant. Ici aussi, nous rejetons $H_0$. Enfin, pour comparaison (en pratique, on ne fait pas systématiquement tous les tests, mais on choisit celui qui est le plus adéquat), que donnerait un test de Kendall ?
+R nous avertit qu'en présence d'ex æquo, le calcul n'est qu'approchant.
+
+```{r, warning=FALSE}
+tabularise(trees_cor_test)
+```
+
+Ici aussi, nous rejetons $H_0$. Enfin, pour comparaison (en pratique, on ne fait pas systématiquement tous les tests, mais on choisit celui qui est le plus adéquat), que donnerait un test de Kendall ?
 
 ```{r}
-cor.test(data = trees, ~ diameter + height,
-  alternative = "greater", method = "kendall") |> tabularise()
+trees_cor_test <- cor.test(data = trees, ~ diameter + height,
+  alternative = "greater", method = "kendall")
+```
+
+```{r, warning=FALSE}
+tabularise(trees_cor_test)
 ```
 
 Même remarque concernant les ex æquo et valeur *p* très similaire ici à celle du test de Spearman.
