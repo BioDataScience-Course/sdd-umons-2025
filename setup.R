@@ -13,6 +13,7 @@
 # General configuration data
 learnitdown <- list(
   baseurl = "https://wp.sciviews.org", # The base URL for the site
+  connecturl = "https://sdd.umons.ac.be", # The URL for the Posit Connect server
   imgbaseurl =
     "https://filedn.com/lzGVgfOGxb6mHFQcRn9ueUb/sdd-umons", # The base URL for external (big) images
   shiny_imgdir = "images/shinyapps",   # The Shiny image directory (screenshots)
@@ -67,7 +68,7 @@ rownames(learnitdown$mod) <- learnitdown$mod$id
 # Assignment URLS
 learnitdown$assign_url <- list(
   # Q1
-  A00Qa_issues         = "https://classroom.github.com/a/...",
+  A00Qa_issues         = "https://classroom.github.com/a/NRpZGtDz",
   A01Ia_scatterplot    = "https://classroom.github.com/a/...",
   A02Ia_distributions  = "https://classroom.github.com/a/...",
   A02Ga_analysis       = "https://classroom.github.com/a/...",
@@ -110,7 +111,7 @@ n4_end <- function(x, module, hour = "23:59:59")
 # becomes:
 # https://wp.sciviews.org/sdd-umons2/?iframe=wp.sciviews.org/sdd-umons2-2025/outils-de-diagnostic-suite.html%23résumé-avec-summarysuite
 course_link <- function(label, course = 1, page, anchor = "", year = !"{YYYY}",
-  baseurl = !"{baseurl}", course_page = "sdd-umons") {
+    baseurl = !"{baseurl}", course_page = "sdd-umons") {
   if (course == 1) {
     course <- ""
   } else{
@@ -217,8 +218,8 @@ learnr <- function(id, title = NULL, toc = "", package = learnitdown$package,
 text = "Effectuez maintenant les exercices du tutoriel")
   learnitdown::learnr(id = id, title = title, package = package, toc = toc,
     text = text, toc.def = "Tutoriel {id}",
-    rstudio.url = paste(learnitdown$baseurl, learnitdown$rstudio, sep = "/"),
-    tuto.img = "images/list-tuto.png",
+    #rstudio.url = paste(learnitdown$baseurl, learnitdown$rstudio, sep = "/"),
+    connect.url = learnitdown$connecturl, tuto.img = "images/list-tuto.png",
     tuto.link = paste(learnitdown$baseurl, "tutorial", sep = "/"))
 
 # Note: use course.urls = c(`S-BIOG-006` = "classroom url1", `S-BIOG-921` = "classroom url2"), and url = link to Github template repository for the assignment
