@@ -69,7 +69,7 @@ rownames(learnitdown$mod) <- learnitdown$mod$id
 learnitdown$assign_url <- list(
   # Q1
   A00Qa_issues         = "https://classroom.github.com/a/NRpZGtDz",
-  A01Ia_scatterplot    = "https://classroom.github.com/a/...",
+  A01Ia_scatterplot    = "https://classroom.github.com/a/_XG5igiU",
   A02Ia_distributions  = "https://classroom.github.com/a/...",
   A02Ga_analysis       = "https://classroom.github.com/a/...",
   A03Ia_graphe_avance  = "https://classroom.github.com/a/...",
