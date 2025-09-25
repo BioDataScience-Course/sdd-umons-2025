@@ -210,7 +210,7 @@ Vous pouvez aussi directement créer une issue depuis RStudio. Voyez le fichier 
 
 Enfin, vous apprendrez à utiliser les documents de type "learnr" dans le premier module. Vous avez à disposition un learnr de "feedback" qui vous permet de faire des suggestions sur le contenu de ce cours, module par module, ou de manière générale :
 
-`r learnr("A99La_feedback", title = "Learnr de feedback", toc = NULL, text = "Utilisez le document suivant pour vos suggestions sur le cours:")`
+`r learnr("A99La_feedback", title = "Learnr de feedback", toc = NULL, text = "Utilisez le document suivant pour vos suggestions sur le cours :")`
 
 *Pour terminer, encore un petit exercice rapide pour vérifier si vous avez lu suffisamment attentivement le contenu ci-dessus...*
 
