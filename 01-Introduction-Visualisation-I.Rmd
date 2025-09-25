@@ -60,7 +60,7 @@ Lorsque vous rencontrez un problème avec votre ordinateur ou un de ses logiciel
 
 *Rappel : lorsque vous voyez le petit logo "H5P" comme ci-dessous, cela signifie que vous avez maintenant un exercice interactif. Cet exercice peut prendre différentes formes (quiz, présentation ou vidéo contenant des questions, vrais ou faux, cliquer sur une image...).*
 
-`r h5p(140, height = 270, toc = NULL)`
+`r h5p(140, "A01Aa_screenshot", height = 270, toc = NULL)`
 
 -   Navigateurs Web
 
@@ -76,7 +76,7 @@ L'objectif principal de ce module est de réaliser des graphiques en nuage de po
 
 Le graphique ci-dessous présente la variation de la hauteur du test en fonction de la masse d'oursins (n'hésitez à faire des petites recherches par vous-même, si vous ne savez pas ce qu'est le "test" d'un oursin).
 
-`r h5p(154, height = 270, toc = NULL)`
+`r h5p(154, "A01Ab_axes", height = 270, toc = NULL)`
 
 <br>
 
@@ -96,7 +96,7 @@ Le préambule de ce cours vous a également permis d'en apprendre davantage sur 
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(135, height = 270, toc = NULL)`
+`r h5p(135, "A01Ac_preambule", height = 270, toc = NULL)`
 
 ##### À vous de jouer ! {.unnumbered}
 
@@ -188,7 +188,7 @@ L'interface de RStudio se présente en quatre sous-fenêtres (on dit aussi des "
 
 *Cliquez sur les symboles + pour découvrir le rôle de chaque sous-fenêtre de RStudio.*
 
-`r h5p(148, height = 270, toc = "L'environnement de RStudio")`
+`r h5p(148, "A01Ha_rstudio2", height = 270, toc = "L'environnement de RStudio")`
 
 Des explications détaillées se trouvent dans l'annexe \@ref(rs) qui présente les bases de l'utilisation de RStudio. Vous avez également à votre disposition un aide-mémoire pour appréhender cette interface [RStudio IDE Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/rstudio-ide.pdf).
 
@@ -272,7 +272,7 @@ La fonction `chart()` n'est pas accessible dans R de base, mais l'extension char
 
 *Note : la vidéo ci-dessous vous expliquant la création du nuage de points dans R sur le jeu de données `urchin` est affublée du signe "H5P", ce qui signifie qu'elle contient également des questions auxquelles vous devez répondre dans le cadre de votre progression dans la matière.*
 
-`r h5p(157, height = 270, toc = "Vidéo d'introduction au graphique en nuage de points")`
+`r h5p(157, "A01Hb_nuage2", height = 270, toc = "Vidéo d'introduction au graphique en nuage de points")`
 
 ```{r, echo=FALSE}
 #vembedr::embed_youtube("-QzG3Xr202w", width = 770, height = 433)
@@ -282,7 +282,7 @@ La fonction `chart()` n'est pas accessible dans R de base, mais l'extension char
 
 `r learnr("A01Lb_scatterplot", title = "Nuage de points", toc = "Graphiques en nuages de points")`
 
-`r h5p(155, height = 270, toc = "Les fonctions chart() et geom_point()")`
+`r h5p(155, "A01Hc_chart", height = 270, toc = "Les fonctions chart() et geom_point()")`
 
 ### Échelles de graphiques
 
@@ -366,7 +366,7 @@ Découvrons un projet qui s'intéresse à la manipulation de tableau de données
 
 *Cliquez sur les symboles **+** pour découvrir les parties importantes de la page principale d'un projet GitHub*
 
-`r h5p(141, height = 270, toc = "Le projet dplyr dans GitHub")`
+`r h5p(141, "A01Hd_github_project", height = 270, toc = "Le projet dplyr dans GitHub")`
 
 Ce projet héberge une multitude de fichiers que vous ne devez pas comprendre pour le moment ;). 7112 "commits" y ont été réalisés (au moment où la capture d'écran a été faite : le projet a évolué depuis et les nombres cités ne sont certainement plus d'actualité par rapport au site aujourd'hui). Pour le moment, retenez qu'un "commit" est un état de sauvegarde du projet. Ce projet traite de la manipulation de données. Un site Web lui est associé [dplyr.tidyverse.org](https://dplyr.tidyverse.org) pour en expliquer le contenu. Un grand nombre de contributeurs ont participé à ce projet (plus de 240). Un fichier `README.md` sert de page de présentation.
 
@@ -382,7 +382,7 @@ Lors d'un travail en équipe, vous allez vous poser des questions et avoir envie
 
 Testez vos nouvelles connaissances en répondant à la question ci-dessous.
 
-`r h5p(137, height = 270, toc = "Exploration d'un dépôt GitHub")`
+`r h5p(137, "A01He_github", height = 270, toc = "Exploration d'un dépôt GitHub")`
 
 GitHub n'est pas le seul réseau social centré sur Git. D'autres réseaux équivalents existent comme [Gitlab](https://about.gitlab.com) ou [Bitbucket](https://bitbucket.org). Cependant, nous utiliserons GitHub ensemble, sachant que les notions apprises ici seront réutilisables ailleurs.
 
@@ -402,7 +402,7 @@ Observez les deux images et tentez de repérer chaque différence entre les deux
 
 *Déplacez le curseur de gauche à droite pour comparer l'interface de RStudio hors projet (à gauche) et avec un projet ouvert (à droite).*
 
-`r h5p(260, height = 270, toc = "Les projets dans RStudio")`
+`r h5p(260, "A01Hf_rs_project2", height = 270, toc = "Les projets dans RStudio")`
 
 1.  Dans la barre d'outils supérieure, on passe de `Projet (Aucun)` vers `Z01Ia_24M_scatterplot-arthurpeeters`. On peut donc facilement repérer si l'on est dans un projet ou non, et si oui, quel est son nom.
 
@@ -541,7 +541,7 @@ Markdown est relativement simple et intuitif à l'usage, même si un petit effor
 
 *Déplacez de droite à gauche le curseur sur l'image ci-dessous pour découvrir la forme finale que pourra prendre ce court paragraphe rédigé en Markdown (fond noir : vue dans l'éditeur, fond blanc : forme finale dans un navigateur Web).*
 
-`r h5p(142, height = 200, toc = "Le fond versus la forme")`
+`r h5p(142, "A01Hg_md_comp", height = 200, toc = "Le fond versus la forme")`
 
 En partant du document Markdown ci-dessus, on peut également obtenir des présentations et différents formats finaux. Ci-dessous, deux feuilles de style différentes ont été appliquées sur ce même document. La présentation diffère (police de caractères, couleurs, taille du texte...)
 
@@ -555,7 +555,7 @@ Consultez les liens [Syntaxe de base pour l'écriture et la mise en forme de Git
 
 *Cet exercice H5P reprend plusieurs questions. Assurez-vous de les passer toutes en revue l'une après l'autre.*
 
-`r h5p(145, height = 200, toc = "Premiers exercices relatifs à Markdown")`
+`r h5p(145, "A01Hh_markdown2", height = 200, toc = "Premiers exercices relatifs à Markdown")`
 
 ##### Pour en savoir plus {.unnumbered}
 
@@ -697,7 +697,7 @@ Il est possible de faire appel à une communauté bien plus grande, mais nous en
 
 Bravo ! Vous arrivez au bout de votre premier module. Cette dernière section vous permet de vérifier que vous avez bien réalisé tous les exercices et de contrôler votre progression telle qu'enregistrée dans notre base de données (étudiants UMONS uniquement). Vous aviez à réaliser les exercices suivants :
 
-`r show_ex_toc()`
+`r show_ex_toc("01")`
 
 ##### Progression {.unnumbered}
 

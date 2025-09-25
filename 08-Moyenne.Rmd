@@ -70,7 +70,7 @@ En fait, ce qui nous intéresse, ce n'est pas vraiment la moyenne de l'échantil
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(86, height = 400, toc = "Notation mathématique")`
+`r h5p(86, "A08Ha_annotation", height = 400, toc = "Notation mathématique")`
 
 Nous pouvons nous demander comment varie la moyenne d'un échantillon à l'autre ? Il est possible de répondre à cette question de manière empirique en utilisant le générateur pseudo-aléatoire de R. Partons d'une distribution théorique de la population qui soit normale, de moyenne $\mu$ = 8 et d'écart type $\sigma$ = 2. Nous pouvons échantillonner neuf individus. Cela donne :
 
@@ -114,7 +114,7 @@ La moyenne de la distribution d'échantillonnage est donc égale à la moyenne d
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(87, height = 400, toc = "Métaexpérience")`
+`r h5p(87, "A08Hb_metaexperience", height = 400, toc = "Métaexpérience")`
 
 Détaillons la métaexpérience toujours à partir de la même population, mais avec des échantillons plus petits, par exemple, avec $n = 4$ :
 
@@ -244,7 +244,7 @@ Nous pouvons voir sur la Fig. \@ref(fig:tdistri1) que la distribution *t* de St
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(89, height = 400, toc = "Tendre vers la distribution normale")`
+`r h5p(89, "A08Hc_loi_student", height = 400, toc = "Tendre vers la distribution normale")`
 
 Revenons à nos calculs de quantiles et probabilités. Les questions que l'on se posera seront plutôt :
 
@@ -349,7 +349,7 @@ Quel est l'impact du choix de $\alpha$ sur le calcul de l'IC ? Plus $\alpha$ se
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(88, height = 400, toc = "Intervalle de confiance")`
+`r h5p(88, "A08Hd_confident", height = 400, toc = "Intervalle de confiance")`
 
 Comme pour tout en statistique, nous devons accepter un certain risque de nous tromper si nous voulons obtenir des résultats utilisables. Plus ce risque est grand, plus la réponse est précise (ici, plus l'IC sera petit, voir Fig. \@ref(fig:tdistri3)), mais plus le risque de se tromper augmente. On cherchera alors un compromis qui se matérialise souvent par le choix de $\alpha$ = 5%. Nous nous tromperons une fois sur vingt, et nous aurons un IC généralement raisonnable pour ce prix. Naturellement, rien ne vous oblige à utiliser 5%. Vous pouvez aussi choisir 1% ou 0,1% si vous voulez limiter les risques.
 
@@ -451,7 +451,7 @@ Ce crabe est rapide et difficile à capturer... mais vous avez quand même réus
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(90, height = 400, toc = "Type d'échantillonnage")`
+`r h5p(90, "A08He_echantillonnage", height = 400, toc = "Type d'échantillonnage")`
 
 ```{r}
 crabs <- read("crabs", package = "MASS", lang = "fr")
@@ -875,7 +875,7 @@ La valeur *p* est supérieure à $\alpha$. Nous ne rejetons pas $H_0$. Nous ne p
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(91, height = 400, toc = "Variantes du test t de Student")`
+`r h5p(91, "A08Hf_variante_test_t", height = 400, toc = "Variantes du test t de Student")`
 
 ```{r assign_A08Ia_ttest, echo=FALSE, results='asis'}
 if (exists("assignment"))
@@ -931,7 +931,7 @@ Nous obtenons un résultat similaire au test *t* de Student indépendant. Nous r
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(92, height = 400, toc = "Choix du test d'hypothèse")`
+`r h5p(92, "A08Hg_test_student", height = 400, toc = "Choix du test d'hypothèse")`
 
 Quand choisir le test *t* de Student ou le test de Wilcoxon ? Nous serions tentés d'effectuer tout le temps un test de Wilcoxon puisqu'ainsi nous sommes certains de ne pas commettre d'impair concernant la distribution des données. Mais en fait, le test *t* de Student est à préférer à chaque fois que c'est possible, car il est plus **puissant**. Cela signifie qu'il sera capable de détecter un effet significatif avec un plus petit nombre de réplicats que le Wilcoxon. La bonne stratégie est donc d'utiliser le test *t* de Student autant que possible (ou la variante de Welch si l'on n'est pas certain que les variances sont égales pour le test *t* indépendant) et de ne se rabattre sur le test de Wilcoxon que si on ne peut pas faire autrement, soit *n* petit et distribution non normale ou inconnue. À noter que quand *n* est vraiment petit, il est impossible d'étudier valablement la distribution des données sur cet échantillon. On doit alors se baser sur un échantillon plus grand prélevé sur des données similaires ou alors jouer la sécurité et effectuer un test de Wilcoxon d'office.
 
@@ -1116,7 +1116,7 @@ if (exists("assignment2"))
 
 Vous venez de terminer le module 8. Ce module vous a permis d'apprendre une grande partie des subtilités qui se cachent derrière la moyenne qui peut nous sembler si simple. Il nous a aussi inité aux tests de Student et de Wilcoxon-Mann-Withney. Pour évaluer votre compréhension de cette matière, vous aviez les exercices suivants à réaliser :
 
-`r show_ex_toc()`
+`r show_ex_toc("08")`
 
 ##### Progression {.unnumbered}
 

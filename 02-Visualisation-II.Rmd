@@ -18,25 +18,25 @@ Le premier module de ce cours vous a permis de découvrir de nouveaux outils log
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(139, height = 270, toc = NULL)`
+`r h5p(139, "A02Aa_tools_summary", height = 270, toc = NULL)`
 
 Ce module va vous permettre de découvrir de nouveaux graphiques à réaliser avec R. Vous devez donc maîtriser les instructions R qui permettent de réaliser un graphique.
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(178, height = 270, toc = NULL)`
+`r h5p(178, "A02Ab_chart", height = 270, toc = NULL)`
 
 Ces graphiques vont être réalisés dans des scripts R et dans des documents R Markdown/Quarto. Il est dès lors indispensable de bien comprendre les différences entre ces deux approches.
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(179, height = 270, toc = NULL)`
+`r h5p(179, "A02Ac_rmarkdown", height = 270, toc = NULL)`
 
 La fin de ce module va traiter de la gestion des conflits dans GitHub. Vous devez maîtriser GitHub et Git pour apprendre ensuite à gérer ces conflits (nous vous expliquerons bien entendu de quoi il s'agit exactement).
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(256, height = 270, toc = NULL)`
+`r h5p(256, "A02Ad_github", height = 270, toc = NULL)`
 
 ## Langage R
 
@@ -48,7 +48,7 @@ Avant de découvrir de nouveaux types de graphiques, réalisez une analyse concr
 
 ([BioDataScience1](https://github.com/BioDataScience-Course/BioDataScience1) est un package R spécialement développé pour ce cours et qui est préinstallé dans votre SciViews Box).
 
-`r h5p(156, height = 270, toc = "Sélection de la fonction adéquate")`
+`r h5p(156, "A02Ha_mean", height = 270, toc = "Sélection de la fonction adéquate")`
 
 
 ## Histogramme
@@ -104,7 +104,7 @@ Prenons un exemple concret simple : des observations d'une variable *X* qui son
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(172, height = 270, toc = "Les fonctions chart() et geom_histogram()")`
+`r h5p(172, "A02Hb_geom_histogram", height = 270, toc = "Les fonctions chart() et geom_histogram()")`
 
 Vous pouvez interpréter votre histogramme sur base des **modes**[^02-visualisation-ii-3] et de la **symétrie**[^02-visualisation-ii-4] de ces derniers. Un histogramme peut être **unimodal** (un seul mode), **bimodal** (deux modes) ou **multimodal** (plus de deux modes). En général, s'il y a plus d'un mode, nous pouvons suspecter que des sous-populations distinctes existent dans les données (par exemple des différences morphométriques entre mâles et femelles pour une espèce au dimorphisme sexuel marqué). En effet, l'allure d'un histogramme qui représente une population homogène est pratiquement toujours unimodal.
 
@@ -140,7 +140,7 @@ rm(g1, g2, g3, g4, df1, df2, df3, df4)
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(171, height = 270, toc = "Modes et symétries")`
+`r h5p(171, "A02Hc_histogram", height = 270, toc = "Modes et symétries")`
 
 ### Nombre de classes
 
@@ -300,7 +300,7 @@ Ici, nous utilisons donc la fonction `geom_density()`.
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(173, height = 270, toc = "La fonction chart() et geom_density()")`
+`r h5p(173, "A02Hd_geom_density", height = 270, toc = "La fonction chart() et geom_density()")`
 
 ```{r assign_A02Ia_distributions, echo=FALSE, results='asis'}
 if (exists("assignment"))
@@ -353,7 +353,7 @@ Ici, la formule fournie à `chart()` indique la variable numérique à représen
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(174, height = 270, toc = "La fonction chart() et geom_violin()")`
+`r h5p(174, "A02He_geom_violin", height = 270, toc = "La fonction chart() et geom_violin()")`
 
 ##### Pièges et astuces {.unnumbered}
 
@@ -449,7 +449,7 @@ On réalise un envoi (**push**) lorsque l'on souhaite synchroniser nos changemen
 
 *Note : l'image suivante est interactive. Il vous est maintenant demandé de cliquer dessus pour indiquer quelles flèches représentent une action particulière dans le schéma présenté.*
 
-`r h5p(146, height = 270, toc = "GitHub : repérer les pushs")`
+`r h5p(146, "A02Hf_git_push2", height = 270, toc = "GitHub : repérer les pushs")`
 
 L'avantage principal de **GitHub** ne réside pas vraiment dans la possibilité de réaliser une sauvegarde en ligne, mais plutôt dans la possibilité de collaborer avec d'autres personnes présentes sur ce réseau comme l'illustre la figure ci-dessous. Deux scientifiques (les versions locales sur leurs ordinateurs respectifs sont indiquées en bleu pour l'un et en vert pour l'autre) collaborent sur un même projet que l'on appelle un **dépôt** (**repository** en anglais) lorsqu'il est en ligne. Le premier chercheur (boules bleues) initie le dépôt et réalise un **push** pour rendre son travail accessible sur le réseau (les versions GitHub sont représentées par des boules orange). Son collaborateur (boules vertes) **clone** ensuite le dépôt sur son ordinateur afin de pouvoir y travailler. Après avoir fait des changements, il réalise également un **push** sur le réseau. Le premier scientifique, avant de travailler à nouveau sur le projet, devra donc réaliser un **pull** pour obtenir en local l'ensemble des modifications fournies par son ou ses collaborateurs. Après ses propres modifications, il devra ensuite effectuer à nouveau un **push**.
 
@@ -457,7 +457,7 @@ L'avantage principal de **GitHub** ne réside pas vraiment dans la possibilité 
 
 *Pour être certain que vous ayez bien compris, encore une image interactive à cliquer...*
 
-`r h5p(147, height = 270, toc = "GitHub : repérer les pulls")`
+`r h5p(147, "A02Hg_git_pull2", height = 270, toc = "GitHub : repérer les pulls")`
 
 ##### À vous de jouer ! {.unnumbered}
 
@@ -471,7 +471,7 @@ Prenons un cas concret entre des collaborateurs qui étudient deux populations d
 
 Arthur et Olivia ont édité la même section d'un document.
 
-`r h5p(257, height = 270, toc = "Deux versions d'un même fichier")`
+`r h5p(257, "A02Hh_conflit", height = 270, toc = "Deux versions d'un même fichier")`
 
 Que va-t-il se passer selon vous ? Lequel des deux collaborateurs va avoir le droit d’écraser le contenu de l’autre ? GitHub n’est pas capable de décider quelle version est la meilleure. Il va donc demander au dernier collaborateur qui souhaite ajouter ces modifications avec le suite d'instruction, **commit -\> pull -\> push**, de gérer ce conflit lui-même.
 
@@ -479,11 +479,11 @@ Que va-t-il se passer selon vous ? Lequel des deux collaborateurs va avoir le d
 
 Cette animation montre l'importance de toujours bien lire le message renvoyé par git. Lors du pull, il précise qu'il y a un conflit à gérer dans le fichier `urchin_notebook.qmd`.
 
-`r h5p(258, height = 270, toc = "Résolution d'un conflit")`
+`r h5p(258, "A02Hi_resolution_conflit", height = 270, toc = "Résolution d'un conflit")`
 
 Vous pouvez ensuite vous rendre dans chaque fichier problématique pour retrouver la ou les zones de conflit (utiliser l'outil de recherche avec l'icône loupe dans l'éditeur RStudio et recherchez par exemple `<<<<<`). En fait, GitHub va placer les deux versions de la même section entre des balises spéciales pour vous permettre de les repérer : une série de signes "plus petit que" indique le début de la première version (`<<<<<<<<<<<<<<<<<<<<<<<<`). Ensuite, une série de signes "égaux" indique le passage à la seconde version (`=======================`). Enfin, une série de signes "plus grand que" indique la fin de la seconde version (`>>>>>>>>>>>>>>>>>>>>>>>>`). Un numéro de commit est aussi indiqué. Dans l'onglet "Git", tous les fichiers qui ont des conflits non résolus apparaissent avec une petite icône orange marquée d'un "U", pour "unresolved conflict". Cela vous aide pour déterminer dans quel(s) fichier(s) se trouve(nt) le(s) conflit(s). Ouvrez chacun de ces fichiers. Ensuite, l'outil de recherche dans l'éditeur vous positionne au début du conflit. Notez bien qu'il peut y avoir **plusieurs zones de conflit dans un même document**. Répétez la recherche jusqu'à ce que RStudio vous dise qu'il ne trouve plus `<<<<<`. Éditez ces zones pour ne garder que la bonne version et éliminez les balises. Ensuite, sauvegardez le document et passez éventuellement au suivant.
 
-`r h5p(259, height = 270, toc = "Résolution d'un conflit (suite)")`
+`r h5p(259, "A02Hj_gestion_conflit", height = 270, toc = "Résolution d'un conflit (suite)")`
 
 La résolution d'un conflit se fait donc en éditant le fichier concerné. Vous devez choisir la partie qui vous semble la plus pertinente et effacer tout le reste, y compris les balises ajoutées par GitHub. Terminez l'opération en enregistrant votre fichier.
 
@@ -527,7 +527,7 @@ if (exists("assignment2"))
 
 Ce module 2 vous a permis de réaliser différents graphiques uni- et bivariés afin de visualiser la *distribution* de variables quantitatives seules ou en fonction des niveaux d'une variable qualitative (facteur). Pour évaluer votre compréhension de cette matière, vous aviez les exercices suivants à réaliser :
 
-`r show_ex_toc()`
+`r show_ex_toc("02")`
 
 ##### Progression {.unnumbered}
 

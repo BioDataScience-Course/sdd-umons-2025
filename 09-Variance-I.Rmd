@@ -48,7 +48,7 @@ chart(data = crabs2, rear ~ group) +
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(227, height = 270, toc = "Graphique associé à l'ANOVA")`
+`r h5p(227, "A09Ha_plots", height = 270, toc = "Graphique associé à l'ANOVA")`
 
 Nous en profitons également pour essayer l'astuce proposée au module précédent. Au lieu de travailler sur la variable `rear` seule, nous allons étudier l'"aspect ratio" entre largeur à l'arrière (`rear`) et largeur maximale (`width`) de la carapace afin de nous débarrasser d'une source de variabilité triviale qui est qu'un grand crabe est grand pour toutes ses mensurations par rapport à un petit crabe. Nous prenons soin également de libeller cette nouvelle variable correctement avec `labelise()`. Enfin, nous ne conservons que les variables `species`, `sex`, `group` et `aspect` avec `sselect()` :
 
@@ -66,7 +66,7 @@ Nous avons 50 individus dans chacun des quatre groupes. **Lorsqu'il y a le même
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(228, height = 270, toc = "Plan balancé d'un expérience")`
+`r h5p(228, "A09Hb_balanced", height = 270, toc = "Plan balancé d'un expérience")`
 
 Nous voyons également que la variable `aspect` semble avoir une distribution bimodale d'après le petit histogramme représenté dans le résumé. La Fig. \@ref(fig:anova0) avec `aspect` montre une différence plus marquée qu'avec `rear` seul (voir Fig. \@ref(fig:crabs-rear)).
 
@@ -110,7 +110,7 @@ Nous allons donc travailler différemment... Ci-après nous verrons qu'une simpl
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(229, height = 270, toc = "Comparaison deux à deux")`
+`r h5p(229, "A09Hc_multiple", height = 270, toc = "Comparaison deux à deux")`
 
 ## ANOVA à un facteur {#anovaunfacteur}
 
@@ -139,7 +139,7 @@ Cette propriété, dite d'additivité des variances, permet de décomposer la va
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(100, height = 400, toc = "Hypothèse nulle de l'ANOVA")`
+`r h5p(100, "A09Hd_anova1", height = 400, toc = "Hypothèse nulle de l'ANOVA")`
 
 ### Modèle de l'ANOVA
 
@@ -192,7 +192,7 @@ Notons que ce modèle à trois termes représente bien la situation qui nous int
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(99, height = 400, toc = "Variance intergroupe dans l'ANOVA")`
+`r h5p(99, "A09He_gof", height = 400, toc = "Variance intergroupe dans l'ANOVA")`
 
 D'une part, nous nous trouvons dans une situation d'additivité de la variance si nous décidons de calculer ces "variance inter" et "variance intra". D'autre part, sous $H_0$ nous sommes sensés avoir toutes les moyennes égales à $\mu$, et donc, tous les $\tau_j = 0$. Donc, les valeurs non nulles de $\tau_j$ ne doivent qu'être dues au hasard de l'échantillonnage et être par conséquent largement inférieures à la variabilité entre les individus, ou variance intra $\epsilon_i$. La Fig. \@ref(fig:anova2) représente deux cas avec à gauche une situation où $H_0$ est plausible, et à droite une situation où elle est très peu plausible. Notez qu'à gauche la variation entre les observations (intra) est bien plus grande que l'écart entre les moyennes (inter), alors qu'à droite c'est l'inverse.
 
@@ -252,7 +252,7 @@ La **statistique *F*~obs~ est le rapport des carrés moyens inter/intra.** Elle 
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(101, height = 400, toc = "Analyse du tableau de l'ANOVA")`
+`r h5p(101, "A09Hf_ddl", height = 400, toc = "Analyse du tableau de l'ANOVA")`
 
 ### Distribution *F*
 
@@ -381,7 +381,7 @@ Si la valeur *p* est inférieure au seuil $\alpha$ fixé au préalable, nous dev
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(102, height = 400, toc = "Variance intragroupe dans l'ANOVA")`
+`r h5p(102, "A09Hg_variance", height = 400, toc = "Variance intragroupe dans l'ANOVA")`
 
 ##### Résolution de notre exemple {.unnumbered}
 
@@ -463,7 +463,7 @@ Tout d'abord, nous mettons en place un garde-fou. Nous effectuons *toujours* une
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(230, height = 400, toc = "tests post hoc")`
+`r h5p(230, "A09Hh_posthoc", height = 400, toc = "tests post hoc")`
 
 Une approche simple consisterait à modifier notre seuil $\alpha$ pour chaque test individuel vers le bas afin que le risque de se tromper dans au moins un des tests ne dépasse pas la valeur de $/alpha$ que nous nous sommes fixée. C'est la **correction de Bonferroni**. Elle consiste à diviser la valeur de $/alpha$ par le nombre de tests simultanés nécessaires, et d'utiliser cette valeur corrigée comme seuil $\alpha$ de chaque test de Student individuel. Dans le cas de quatre populations, nous avons vu qu'il y a six comparaisons multiples deux à deux. Donc, en appliquant un seuil corrigé de $\alpha/6 = 0,05 / 6 = 0,00833$ pour chaque test, on aura la probabilité suivante pour $1 - \alpha$ :
 
@@ -611,7 +611,7 @@ if (exists("assignment2"))
 
 Vous venez de terminer le module 9. Ce module vous a permis d'apprendre une grande partie des subtilités qui se cachent derrière l'analyse de variance. Pour évaluer votre compréhension de cette matière, vous aviez les exercices suivants à réaliser :
 
-`r show_ex_toc()`
+`r show_ex_toc("09")`
 
 ##### Progression {.unnumbered}
 

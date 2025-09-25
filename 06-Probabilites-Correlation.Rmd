@@ -106,7 +106,7 @@ p_sick_positive / p_positive
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(68, height = 400, toc = "Lecture de probabilités")`
+`r h5p(68, "A06Ha_proba1", height = 400, toc = "Lecture de probabilités")`
 
 ```{block, type='note'}
 Dans le cas de deux faits successifs qui ne peuvent chacun que résulter en deux évènements, nous avons seulement quatre situations possibles. Si l'un des cas est qualifié de positif et l'autre de négatif, nous aurons :
@@ -153,7 +153,7 @@ Comme nous pouvons le constater ici, le calcul des probabilités est relativemen
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(70, height = 400, toc = "Validité d'un test")`
+`r h5p(70, "A06Hb_proba2", height = 400, toc = "Validité d'un test")`
 
 ### Arbre des probabilités
 
@@ -229,7 +229,7 @@ $$\mathrm{P(A\, \mathrm{ou}\, B)} = \mathrm{P}(A) + \mathrm{P(B)} - \mathrm{P}(A
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(69, height = 400, toc = "Lecture de probabilités 2")`
+`r h5p(69, "A06Hc_proba3", height = 400, toc = "Lecture de probabilités 2")`
 
 ### Probabilités et contingence
 
@@ -428,7 +428,7 @@ La distribution $U(0, 1)$ est particulière et est appelée **distribution unifo
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(71, height = 400, toc = "Distribution continue")`
+`r h5p(71, "A06Hd_distribution", height = 400, toc = "Distribution continue")`
 
 ### Quantiles vers probabilités
 
@@ -458,7 +458,7 @@ punif(2.5, min = 0, max = 4, lower.tail = TRUE)
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(72, height = 400, toc = "Complétez la fonction punif()")`
+`r h5p(72, "A06He_distribution2", height = 400, toc = "Complétez la fonction punif()")`
 
 Mais comme nous voulons déterminer la probabilité qu'un insecte arrive entre 2 et 2.5 minutes, nous devons soustraire à cette valeur la probabilité qu'un insecte arrive en moins de 2 min (la zone en rouge dans la Fig \@ref(fig:unif3) est en effet l'aire à gauche depuis le quantile 2.5 *moins* l'aire à gauche depuis le quantile 2) :
 
@@ -508,7 +508,7 @@ Donc il faut observer pendant 1.33 min (1 min et 20 secs) pour avoir une chan
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(73, height = 400, toc = "Complétez la fonction qunif()")`
+`r h5p(73, "A06Hf_distribution3", height = 400, toc = "Complétez la fonction qunif()")`
 
 ```{=html}
 <!-- ### Calcul avec les snippets
@@ -576,7 +576,7 @@ runif(10, min = 0, max = 1) # Série de 10 nombres les mêmes à chaque exécuti
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(74, height = 400, toc = "Fonction set.seed()")`
+`r h5p(74, "A06Hg_set_seed", height = 400, toc = "Fonction set.seed()")`
 
 Mais revenons à notre comparaison des fonctions p/q/r/d et des méthodes de l'objet **distribution**. Un premier avantage que vous aurez certainement remarqué, c'est que les paramètres de la distribution (ici `min =` et `max =`) ne sont introduits qu'une seule fois, à la construction de notre objet `U`. Si la distribution doit être utilisée plusieurs fois, c'est un avantage. Ensuite, nous pouvons aussi avoir d'autres informations relatives à cette distribution, par exemple (voyez l'aide en ligne de ces différentes fonctions pour plus de détails) :
 
@@ -782,7 +782,7 @@ C'est embêtant, puisque la forme du nuage de points n'a, lui, pas changé du to
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(127, height = 400, toc = "Covariance entre deux variables")`
+`r h5p(127, "A06Hh_covariance", height = 400, toc = "Covariance entre deux variables")`
 
 Le **coefficient de corrélation de Pearson**, noté *r*, est une autre mesure qui est *normée* de telle façon qu'il prenne la valeur +1 pour une proportionnalité directe parfaite (les points sont strictement alignés le long d'une droite) et -1 lorsque la proportionnalité est inverse parfaite (et toujours 0 en cas de non-association).
 
@@ -803,7 +803,7 @@ Cette fois-ci, nous obtenons la même valeur pour *r* que le calcul se fasse à 
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(128, height = 400, toc = "Avantage du coefficient de corrélation de Pearson")`
+`r h5p(128, "A06Hi_pearson", height = 400, toc = "Avantage du coefficient de corrélation de Pearson")`
 
 Faites attention à deux points importants.
 
@@ -827,7 +827,7 @@ L'association entre deux variables numériques peut ainsi s'envisager selon troi
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(126, height = 400, toc = "Association de deux variables")`
+`r h5p(126, "A06Hj_association", height = 400, toc = "Association de deux variables")`
 
 #### Matrice de corrélation
 
@@ -963,7 +963,7 @@ Nous voyons que ces quatre paires de variables n'ont **rien à voir les unes ave
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(129, height = 400, toc = "Variables les plus corrélées")`
+`r h5p(129, "A06Hk_corplot", height = 400, toc = "Variables les plus corrélées")`
 
 #### Matrice de nuages de points
 
@@ -989,7 +989,7 @@ Comme ces descripteurs statistiques ne sont pas normés, ils sont plus difficile
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(130, height = 400, toc = "Matrice de variance-covariance")`
+`r h5p(130, "A06Hl_matrice_covariance", height = 400, toc = "Matrice de variance-covariance")`
 
 #### Corrélations de Spearman et Kendall
 
@@ -1029,7 +1029,7 @@ Nous avons déjà abordé cette question dans le chapitre 5. Si nous pouvions me
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(81, height = 400, toc = "Méthode d'échantillonnage")`
+`r h5p(81, "A06Hm_echantillon", height = 400, toc = "Méthode d'échantillonnage")`
 
 Nous n'avons pas forcément accès à tous les individus d'une population. Dans ce cas, nous devons la limiter à un sous-ensemble raisonnable. Par exemple, il est impossible de mesurer *toutes* les souris. Par contre, nous pouvons décider d'étudier la ou les souches de souris disponibles dans l'animalerie, ou chez nos fournisseurs.
 
@@ -1044,7 +1044,7 @@ L'estimation de paramètres d'une population par le biais de calculs sur un éch
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(82, height = 400, toc = "Inférence statistique")`
+`r h5p(82, "A06Hn_inference", height = 400, toc = "Inférence statistique")`
 
 ##### Travail préliminaire {.unnumbered}
 
@@ -1067,7 +1067,7 @@ Les deux hypothèses ne sont pas symétriques. Notre intention est de **rejeter*
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(83, height = 400, toc = "Hypothèse nulle")`
+`r h5p(83, "A06Ho_hypothese", height = 400, toc = "Hypothèse nulle")`
 
 Revenons à notre réflexion qui a initié la réalisation d'un test d'hypothèse. À partir de quand une corrélation entre deux variables est-elle significative ? Il existe un test d'hypothèse qui répond à cette question, avec une version pour chacun des trois coefficients de corrélation : *r* de Pearson, $\rho$ de Spearman et $\tau$ de Kendall. Pour *r* de Pearson, nous aurons les hypothèses suivantes :
 
@@ -1145,7 +1145,7 @@ Nous venons de réaliser nos premiers tests d'hypothèses. Dans les prochains mo
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(131, height = 400, toc = "Test de corrélation")`
+`r h5p(131, "A06Hp_cor_test", height = 400, toc = "Test de corrélation")`
 
 `r learnr("A06Lc_correlation", title = "Coefficients et tests de corrélation", toc = "Coefficients et tests de corrélation")`
 
@@ -1170,7 +1170,7 @@ if (exists("assignment"))
 
 Vous venez de terminer le module six. Ce module vous a permis d'apprendre les bases des probabilités, de découvrir les premières lois de distributions, la corrélation et les premiers éléments concernant les tests d'hypothèse. Pour évaluer votre compréhension de cette matière, vous aviez les exercices suivants à réaliser :
 
-`r show_ex_toc()`
+`r show_ex_toc("06")`
 
 ##### Progression {.unnumbered}
 

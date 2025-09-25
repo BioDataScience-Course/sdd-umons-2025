@@ -34,7 +34,7 @@ Nous nous efforcerons de toujours créer un tableau de ce type pour nos données
 
 *Considérez les données suivantes concernant la taille adulte mesurée en cm pour deux espèces de petits rongeurs :*
 
-`r h5p(47, height = 270, toc = "Tableau cas par variables 1")`
+`r h5p(47, "A05Ha_cas_variables1", height = 270, toc = "Tableau cas par variables 1")`
 
 ```{=html}
 <!----
@@ -53,7 +53,7 @@ Nous notons immédiatement que ce *n'est pas* un tableau correctement présenté
 
 *Considérez ce second tableau de données concernant également la taille adulte mesurée en cm de deux espèces de petits rongeurs :*
 
-`r h5p(48, height = 270, toc = "Tableau cas par variables 2")`
+`r h5p(48, "A05Hb_cas_variables2", height = 270, toc = "Tableau cas par variables 2")`
 
 ```{=html}
 <!----
@@ -77,9 +77,9 @@ Ce dernier tableau est moins compact et plus "verbeux" que le présenter (il fau
 
 *Considérez maintenant ce troisième exemple fictif avec le résultat d'un test enregistré avant et après un traitement censé améliorer le résultat du test :*
 
-`r h5p(49, height = 270, toc = "Tableau cas par variables 3")`
+`r h5p(49, "A05Hc_cas_variables3", height = 270, toc = "Tableau cas par variables 3")`
 
-`r h5p(50, height = 270, toc = "Tableau cas par variables 4")`
+`r h5p(50, "A05Hd_cas_variables4", height = 270, toc = "Tableau cas par variables 4")`
 
 ```{=html}
 <!----
@@ -161,7 +161,7 @@ Le tableau cas par variables n'est toutefois pas la seule représentation (corre
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(52, height = 270, toc = "Tableau de contingence")`
+`r h5p(52, "A05He_contingence", height = 270, toc = "Tableau de contingence")`
 
 La fonction `table()` crée ces deux types de tableaux de contingence à partir de données encodées en tableau cas par variables :
 
@@ -175,7 +175,7 @@ biometry$age_rec <- cut(biometry$age, include.lowest = FALSE, right = TRUE,
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(51, height = 270, toc = "Tableau de contingence dans R")`
+`r h5p(51, "A05Hf_table", height = 270, toc = "Tableau de contingence dans R")`
 
 Le tableau de contingence peut toujours être calculé à partir d'un tableau cas par variable, mais il peut également être encodé directement si nécessaire. Voici un petit tableau de contingence à simple entrée encodé directement comme tel (vecteur nommé transformé en objet `table` à l'aide de la fonction `as.table()`) :
 
@@ -326,7 +326,7 @@ Le dictionnaire des données est un outil important pour comprendre ce que conti
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(53, height = 270, toc = "Données et métadonnées")`
+`r h5p(53, "A05Hg_tidy_data", height = 270, toc = "Données et métadonnées")`
 
 ## Population et échantillonnage {#population}
 
@@ -436,7 +436,7 @@ Les erreurs de mesures sont inévitables lors de l'acquisition de nos données. 
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(54, height = 270, toc = "Précision et exactitude")`
+`r h5p(54, "A05Hh_precision", height = 270, toc = "Précision et exactitude")`
 
 ```{=html}
 <!----
@@ -619,7 +619,7 @@ Très souvent, lorsqu'il est impossible de réaliser un graphique avec `chart()`
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(55, height = 270, toc = "Transformation de long vers large")`
+`r h5p(55, "A05Hi_pivot_longer", height = 270, toc = "Transformation de long vers large")`
 
 Pour passer du format long au format large (traitement inverse à `(s)pivot_longer()`), il faut utiliser la fonction tidy `pivot_wider()` ou la fonction speedy `spivot_wider()`. Ainsi pour retrouver le tableau d'origine (ou quelque chose de très semblable) à partir de `shotgun_long` nous utiliserons :
 
@@ -833,7 +833,7 @@ if (exists("assignment2"))
 
 Vous venez de terminer le module 5 qui clôture la première partie du cours. Ce module vous a permis d'apprendre à présenter correctement des données (cas par variables ou tableau de contingence), à planifier vos mesures et préparer votre échantillonnage, à recombiner, remodeler et fusionner des tableaux. Pour évaluer votre compréhension de cette matière, vous aviez les exercices suivants à réaliser :
 
-`r show_ex_toc()`
+`r show_ex_toc("05")`
 
 ##### Progression {.unnumbered}
 

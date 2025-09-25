@@ -271,10 +271,6 @@ Reprenons l'élément principal de test d'hypothèse. Il permet de réaliser de 
 
 Les deux hypothèses ne sont pas symétriques. Notre intention est de **rejeter** $H_0$. Dans ce cas, nous pourrons considérer que $H_1$ est vraie avec un certain degré de certitude que nous pourrons également quantifier. Si nous n'y arrivons pas, nous dirons que nous ne pouvons pas rejeter $H_0$, mais nous ne pourrons jamais dire que nous l'**acceptons,** car dans ce cas, deux explications resteront possibles : (1) $H_0$ est effectivement vraie, ou (2) $H_0$ est fausse mais nous n'avons pas *assez* de données à disposition pour le démontrer avec le niveau de certitude recherché.
 
-##### À vous de jouer ! {.unnumbered}
-
-`r h5p(83, height = 400, toc = "Hypothèse nulle")`
-
 #### Becs croisés des sapins
 
 Le bec-croisé des sapins *Loxia curvirostra* Linné 1758 est un passereau qui a la particularité d'avoir un bec dont les deux parties se croisent, ce qui donne un outil particulièrement adapté pour extraire les graines de conifères dont il se nourrit.
@@ -501,7 +497,7 @@ Le test d'hypothèse reporte la valeur *p* afin qu'un lecteur qui aurait choisi 
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(84, height = 400, toc = "Description du test d'hypothèse")`
+`r h5p(84, "A07Ha_chi2", height = 400, toc = "Description du test d'hypothèse")`
 
 ```{=html}
 <!-- G.E. je pose une question H5P qui reprend cet élément.
@@ -797,7 +793,7 @@ Les **métriques** sont des variables issues de calculs plus complexes et qui vi
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(85, height = 400, toc = "Variables calculées")`
+`r h5p(85, "A07Hb_metrique", height = 400, toc = "Variables calculées")`
 
 Créez maintenant un projet de groupe par quatre étudiants. Attention : ce projet sera également à développer durant les trois modules suivants.
 
@@ -849,7 +845,7 @@ Les instructions sont détaillées ici\ :
 
 Vous venez de terminer le module 7. Ce module vous a permis de découvrir les distributions binomiales, de Poisson et log-normale, le graphique quantile-quantile et d'apprendre à réaliser vos premiers tests de Chi^2^, ainsi que des variables calculées pertinentes. Pour évaluer votre compréhension de cette matière, vous aviez les exercices suivants à réaliser :
 
-`r show_ex_toc()`
+`r show_ex_toc("07")`
 
 ##### Progression {.unnumbered}
 

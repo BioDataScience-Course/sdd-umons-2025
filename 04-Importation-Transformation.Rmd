@@ -88,7 +88,7 @@ Les explications détaillées concernant l'organisation de vos projets dans RStu
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(38, height = 400, toc = "Chemins relatifs pour les fichiers")`
+`r h5p(38, "A04Ha_acces", height = 400, toc = "Chemins relatifs pour les fichiers")`
 
 ##### Pièges et astuces {.unnumbered}
 
@@ -170,7 +170,7 @@ Nous vous conseillons de placer la version brute des données dans le sous-dossi
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(39, height = 270, toc = "Rôle de .gitignore")`
+`r h5p(39, "A04Hb_gitignore", height = 270, toc = "Rôle de .gitignore")`
 
 ### Données depuis un package
 
@@ -261,7 +261,7 @@ Le code a dû être modifié dans l'instruction `sfilter()` lors du passage à `
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(40, height = 270, toc = "Importation de données depuis un package")`
+`r h5p(40, "A04Hc_readpackage", height = 270, toc = "Importation de données depuis un package")`
 
 ## Types de variables
 
@@ -306,7 +306,7 @@ Avec une seule instruction, on obtient une quantité d'information sur notre jeu
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(41, height = 270, toc = "Types de variables")`
+`r h5p(41, "A04Hd_variable", height = 270, toc = "Types de variables")`
 
 ## Conversion de variables
 
@@ -328,7 +328,7 @@ floor(x)
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(42, height = 270, toc = "Arrondir des nombres")`
+`r h5p(42, "A04He_round", height = 270, toc = "Arrondir des nombres")`
 
 ### Quantitatif à qualitatif
 
@@ -651,7 +651,7 @@ urchin_sub5
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(44, height = 270, toc = "Filtrer un tableau")`
+`r h5p(44, "A04Hf_filter", height = 270, toc = "Filtrer un tableau")`
 
 ### `mutate()`/`smutate()`
 
@@ -710,7 +710,7 @@ Selon le contexte, la version tidy/speedy ou la version R de base sera la plus p
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(43, height = 270, toc = "Calculer une nouvelle variable")`
+`r h5p(43, "A04Hg_mutate", height = 270, toc = "Calculer une nouvelle variable")`
 
 ### `group_by()`/`sgroup_by()`
 
@@ -1084,7 +1084,7 @@ if (exists("assignment2"))
 
 Le module 4 que vous venez de terminer vous a permis d'apprendre à importer des données depuis différents formats et sources grâce à la fonction `read()` et de transformer un tableau de données ou le résumez à l'aide des fonctions tidy, speedy et fstat. Pour évaluer votre compréhension de cette matière vous aviez les exercices suivants à réaliser :
 
-`r show_ex_toc()`
+`r show_ex_toc("04")`
 
 ##### Progression {.unnumbered}
 

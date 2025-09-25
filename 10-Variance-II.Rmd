@@ -32,7 +32,7 @@ Si nous prenons notre exemple des crabes *L. variegatus*, nous avions travaillé
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(116, height = 400, toc = "Principe de l'ANOVA à deux facteurs")`
+`r h5p(116, "A10Ha_anova2", height = 400, toc = "Principe de l'ANOVA à deux facteurs")`
 
 Les sections suivantes vous présentent quelques variantes possibles de cette analyse.
 
@@ -72,7 +72,7 @@ crabs2 %>.%
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(117, height = 400, toc = "Différents types de variables")`
+`r h5p(117, "A10Hb_variable_quali", height = 400, toc = "Différents types de variables")`
 
 Au niveau de la description préliminaire des données, nous pourrons utiliser un tableau qui résume la moyenne, la variance (ou l'écart type) et le nombre d'observations pour chaque combinaison des deux variables facteurs.
 
@@ -113,7 +113,7 @@ bartlett.test(data = crabs2, aspect5 ~ interaction(species, sex))
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(118, height = 400, toc = "Homoscédasticité et hétéroscédasticité")`
+`r h5p(118, "A10Hc_bartlett", height = 400, toc = "Homoscédasticité et hétéroscédasticité")`
 
 Si vous comparez avec le test que nous avions fait dans le cas de l'ANOVA à un facteur sur la variable `group`, vous constaterez qu'il donne exactement le même résultat. Nous continuons avec notre ANOVA (que nous mettons en forme avec `tabularise()`).
 
@@ -185,7 +185,7 @@ $$y \sim fact1 * fact2$$
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(113, height = 400, toc = "Modèle croisé complet")`
+`r h5p(113, "A10Hd_modele", height = 400, toc = "Modèle croisé complet")`
 
 Cette fois-ci, la décomposition de la variable se fait en quatre étapes : (1) depuis la moyenne générale µ vers les *j*^èmes^ moyennes pour `fact1`, ensuite (2) de ces moyennes vers les *k*^èmes^ moyennes pour `fact2`, puis (3) de ces dernières vers la moyenne particulière pour le sous-groupe *jk*, et enfin (4) les résidus $\epsilon_i$ pour chaque observation. Voyons ce que donne ce modèle complet sur nos données `crabs2`.
 
@@ -211,7 +211,7 @@ Les conditions d'application sont les mêmes que pour l'ANOVA à deux facteurs s
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(112, height = 400, toc = "Graphique des interactions")`
+`r h5p(112, "A10He_interactions", height = 400, toc = "Graphique des interactions")`
 
 `r learnr("A10La_anova2", title = "ANOVA à 2 facteurs", toc = "Analyse de variance à 2 facteurs")`
 
@@ -696,7 +696,7 @@ Dans le cadre de ce cours, nous utilisons un style propre à SciViews::R Il est 
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(115, height = 400, toc = "Trois principales syntaxes")`
+`r h5p(115, "A10Hf_syntaxe", height = 400, toc = "Trois principales syntaxes")`
 
 ### Indiçage dans R
 
@@ -820,7 +820,7 @@ Maintenant que nous sommes familiarisés avec les différents modes d'indiçage 
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(119, height = 400, toc = "Indiçage dans R")`
+`r h5p(119, "A10Hg_indices", height = 400, toc = "Indiçage dans R")`
 
 ### Comparaison de styles
 
@@ -898,7 +898,7 @@ Le résultat est le même qu'avec le code R de base, mais la syntaxe est très d
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r h5p(114, height = 400, toc = "Sélection de variables")`
+`r h5p(114, "A10Hh_select", height = 400, toc = "Sélection de variables")`
 
 Pour calculer une nouvelle variable, par exemple le logarithme en base 10 de l'aire dans `log_area`, nous ferons comme ceci en R de base :
 
@@ -1038,6 +1038,7 @@ if (exists("challenge"))
       'S-BIOG-027' = !"{mod['A03', 'challenge']} 10:00:00"),
     course.ends = c(
       'S-BIOG-027' = !"{mod['A03', 'challenge']} 13:00:00"),
+    term = "Q2",
     toc = "Challenge tests d'hypothèses")
 ```
 
@@ -1060,7 +1061,7 @@ Vous pouvez soumettre vos résultats pendant une période de temps précise via 
 
 Pour évaluer votre compréhension de cette matière, vous aviez les exercices suivants à réaliser :
 
-`r show_ex_toc()`
+`r show_ex_toc("10", finalize = TRUE)`
 
 ##### Progression {.unnumbered}
 
