@@ -236,7 +236,7 @@ L'histogramme est maintenant séparé en trois en fonction des niveaux de la var
 nbins <- 25
 chart(data = iris, ~ sepal_length %fill=% species | species) +
   # histogramme d'arrière-plan en gris de toutes les données
-  geom_histogram(data = sselect(iris, -species),
+  geom_histogram(data = select_(iris, ~-species),
     fill = "grey", bins = nbins) + 
   # histogrammes par espèce
   geom_histogram(show.legend = FALSE, bins = nbins) +
@@ -325,7 +325,7 @@ Le graphique en violon ou diagramme en violon est constitué de deux graphiques 
 ```{r violin-plot, fig.cap="Graphe en violon de la distribution de la taille en fonction des groupes taxonomiques dans un échantillon de zooplancton. Les couleurs pour les axes servent à mettre des éléments en évidence. En pratique, les axes seront noirs.", echo=FALSE, message=FALSE, warning=FALSE}
 
 zooplankton %>.%
-  sfilter(., class %in% c("Annélide", "Calanoïde", "Cyclopoïde", "Décapode")) %>.%
+  filter_(., ~class %in% c("Annélide", "Calanoïde", "Cyclopoïde", "Décapode")) %>.%
   chart(data = ., size ~ class %fill=% class) +
     geom_violin(show.legend = FALSE)  +
     theme(axis.text.x  = element_text(colour = "#a80039", size = 15), 
@@ -336,14 +336,14 @@ zooplankton %>.%
           axis.line.y  = element_line(colour = "#a80039"))
 ```
 
-Les instructions en R pour produire un diagramme en violon à l'aide de la fonction `chart()` sont présentées ci-dessous. Comme le jeu de données `zooplankton` contient 17 classes différentes, nous décidons ici d'en extraire un sous-tableau ne contenant que les quatre classes de crustacés copépodes à l'aide d'une fonction `sfilter()`. Pour l'instant, retenez simplement que ce genre de remaniement de tableau est possible. Nous étudierons ces fonctions plus en détail dans les modules 4 et 5. Notre tableau réduit à quatre classes se nomme `zooplankton_sub` et c'est à partir de lui que nous réalisons notre graphique.
+Les instructions en R pour produire un diagramme en violon à l'aide de la fonction `chart()` sont présentées ci-dessous. Comme le jeu de données `zooplankton` contient 17 classes différentes, nous décidons ici d'en extraire un sous-tableau ne contenant que les quatre classes de crustacés copépodes à l'aide d'une fonction `filter_()`. Pour l'instant, retenez simplement que ce genre de remaniement de tableau est possible. Nous étudierons ces fonctions plus en détail dans les modules 4 et 5. Notre tableau réduit à quatre classes se nomme `zooplankton_sub` et c'est à partir de lui que nous réalisons notre graphique.
 
 ```{r violin-plot2, fig.cap="Distribution des tailles pour quatre groupes taxonomiques de zooplancton."}
 # Importation du jeu de données
 zooplankton <- read("zooplankton", package = "data.io", lang = "FR")
 # Réduction du jeu de données 
-zooplankton_sub <- sfilter(zooplankton,
-  class %in% c("Annélide", "Calanoïde", "Cyclopoïde", "Décapode"))
+zooplankton_sub <- filter_(zooplankton,
+  ~class %in% c("Annélide", "Calanoïde", "Cyclopoïde", "Décapode"))
 # Réalisation du graphique
 chart(data = zooplankton_sub, size ~ class) +
   geom_violin()

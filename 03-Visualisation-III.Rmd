@@ -32,8 +32,8 @@ $$\sim variable \ facteur$$
 
 ```{r barres-facteur, fig.cap= "Exemple d'un graphique en barres montrant le dénombrement des niveaux d'une variable facteur, avec les éléments importants du graphique mis en évidence en couleurs.", echo=FALSE, message=FALSE}
 zooplankton <- read("zooplankton", package = "data.io", lang = "FR")
-copepoda <- sfilter(zooplankton,
-  class %in% c("Calanoïde", "Cyclopoïde",  "Harpacticoïde", "Poecilostomatoïde"))
+copepoda <- filter_(zooplankton,
+  ~class %in% c("Calanoïde", "Cyclopoïde",  "Harpacticoïde", "Poecilostomatoïde"))
 
 chart(data = copepoda, ~ class) +
   geom_bar() +
@@ -53,13 +53,13 @@ Outre les barres elles-mêmes, prêtez toujours attention aux éléments suivant
 -   les niveaux de la variable facteur (en rouge également)
 -   le label des axes (en bleu)
 
-Les instructions dans R pour produire un graphique en barres à l'aide de la fonction `chart()` sont les suivantes. Nous partons d'un jeu de données `zooplankton` que nous importons et dont nous extrayons un sous-ensemble à l'aide de la fonction `sfilter()` (vous étudierez en détail les fonctions de remaniement de tableaux dans les deux prochains modules) avant de réaliser notre graphique à l'aide de `chart()` :
+Les instructions dans R pour produire un graphique en barres à l'aide de la fonction `chart()` sont les suivantes. Nous partons d'un jeu de données `zooplankton` que nous importons et dont nous extrayons un sous-ensemble à l'aide de la fonction `filter_()` (vous étudierez en détail les fonctions de remaniement de tableaux dans les deux prochains modules) avant de réaliser notre graphique à l'aide de `chart()` :
 
 ```{r barres-facteur2, fig.cap="Abondances de quatre types de copépodes dans un échantillon de zooplancton."}
 # Importation du jeu de données
 (zooplankton <- read("zooplankton", package = "data.io", lang = "FR"))
 # Réduction du jeu de données à quatre classes seulement
-(copepoda <- sfilter(zooplankton, class %in% c("Calanoïde", "Cyclopoïde",
+(copepoda <- filter_(zooplankton, ~class %in% c("Calanoïde", "Cyclopoïde",
   "Harpacticoïde",  "Poecilostomatoïde")))
 # Réalisation du graphique
 chart(data = copepoda, ~ class) +
@@ -102,10 +102,10 @@ Nous utilisons `head()` et `tail()` pour extraire les quelques lignes de début 
 Vous commencez à comprendre que si vous effectuez maintenant la comparaison `year_measure < 2017` lorsque cette variable est encodée comme facteur, cela ne fonctionnera pas comme vous le souhaitez ! Si on est chanceux, un message d'erreur ou d'avis ("warning") est imprimé.
 
 ```{r, error=TRUE}
-biometry2 <- sfilter(biometry, year_measure < 2017) 
+biometry2 <- filter_(biometry, ~year_measure < 2017) 
 ```
 
-Notez au passage que `sfilter()` n'utilise pas la notation `biometry$year_measure`, mais prend un premier argument qui est le jeu de données `biometry`, et la suite se réfère aux variables de ce jeu de données telles que `year_measure` en priorité aux autres variables disponibles dans l'environnement utilisateur de R. Aussi `sfilter()` renvoie tout le tableau remanié. Donc, nous devons l'affecter simplement à une variable qui contient ce tableau (`biometry2` ici). Vous pouvez aussi utiliser la fonction `filter()` qui s'emploie de manière similaire.
+Notez au passage que `filter_()` n'utilise pas la notation `biometry$year_measure`, mais prend un premier argument qui est le jeu de données `biometry`, et la suite se réfère aux variables de ce jeu de données telles que `year_measure` en priorité aux autres variables disponibles dans l'environnement utilisateur de R dans une **formule** (un objet R qui contient une instruction et qui commence par `~` ici). Aussi `filter_()` renvoie tout le tableau remanié. Donc, nous devons l'affecter simplement à une variable qui contient ce tableau (`biometry2` ici). Vous pouvez aussi utiliser la fonction `filter()` qui s'emploie de manière similaire mais sans formule (retirez le `~` devant `year_measure < 2017`).
 
 Mais revenons à notre variable facteur. Dans d'autres cas, le résultat peut être dramatique, car le calcul est appliqué à l'encodage des niveaux de la variable facteur. Or, avec quatre niveaux, les encodages sont 1, 2, 3 et 4, ... et ils sont bien évidemment tous inférieurs à 2017 (pour rappel, "2013", "2014", "2016" et "2017" sont les libellés textuels des niveaux de la variable facteur) !
 
@@ -119,7 +119,7 @@ Le calcul explicite et sûr est donc le suivant :
 # Transforme de manière sûre factor -> numeric (double)
 biometry$year_measure <- as.numeric(as.character(biometry$year_measure))
 # Filtre les données sur une copie du tableau
-biometry2 <- sfilter(biometry, year_measure < 2017)
+biometry2 <- filter_(biometry, ~year_measure < 2017)
 # Retransforme en variable factor
 biometry2$year_measure <- as.factor(biometry2$year_measure)
 # Vérification
@@ -128,7 +128,7 @@ tail(biometry2)$year_measure
 
 Naturellement ici, la bonne stratégie est d'effectuer le calcul sur le tableau de départ **avant** de transformer en facteur, mais nous sommes partis de la variable facteur à titre d'illustration d'un cas qui peut se rencontrer en pratique. À présent que nous avons notre jeu de données sans les individus de 2017, et les variables correctement encodées, nous pouvons aborder différentes représentations pour observer des dénombrements tenant compte de plusieurs variables facteurs. Par défaut, l'argument `position =` a pour valeur `"stack"` (donc, lorsque cet argument n'est pas précisé dans `geom_bar()`, les barres sont empilées par rapport à la seconde variable facteur).
 
-```{r barres-2facteurs, echo=TRUE, fig.cap="Dénombrement des hommes (H) et des femmes (F) dans l'étude sur l'obésité en Hainaut, (A) graphique utilisant un seul facteur. (B) graphique prenant en compte les années de mesure."}
+```{r barres-2facteurs, echo=TRUE, warning=FALSE, fig.cap="Dénombrement des hommes (H) et des femmes (F) dans l'étude sur l'obésité en Hainaut, (A) graphique utilisant un seul facteur. (B) graphique prenant en compte les années de mesure."}
 a <- chart(data = biometry2, ~ gender) +
   geom_bar() +
   ylab("Effectifs")
@@ -143,7 +143,7 @@ combine_charts(list(a, b), common.legend = TRUE)
 
 Il existe d'autres options en utilisant les valeurs `"dodge"` ou `"fill"` pour l'argument `position =`.
 
-```{r barres-2facteurs2, fig.cap="Dénombrement des hommes (H) et des femmes (F) dans l'étude sur l'obésité en Hainaut en tenant compte des années de mesure (différentes présentations).", echo=TRUE}
+```{r barres-2facteurs2, warning=FALSE, fig.cap="Dénombrement des hommes (H) et des femmes (F) dans l'étude sur l'obésité en Hainaut en tenant compte des années de mesure (différentes présentations).", echo=TRUE}
 a <- chart(data = biometry2, ~ gender %fill=% year_measure) +
   geom_bar(position = "stack") +
   ylab("Effectifs") +
@@ -190,7 +190,7 @@ chart(data = zooplankton, ~ class) +
 
 Dans ce cas, il est possible de réaliser un graphique en **barres horizontales** qui laisse plus de place pour le libellé sur l'axe. Il existe deux manières de le faire : préférentiellement en utilisant l'argument `orientation = "y"` de `geom_bar()` (mais alors il faut utiliser `aes(y = ...)` à la place de la formule). Une seconde option consiste à réaliser le graphique en barres verticales (tout le code reste identique), mais de rajouter `coord_flip()` tout à la fin. Utilisons successivement ces deux approches.
 
-```{r barres-rotation, fig.cap="Dénombrement des classes du jeu de données zooplankton (version avec barres horizontales en utilisant `orientation = \"y\"`)."}
+```{r barres-rotation, fig.cap="Dénombrement des classes du jeu de données zooplankton (version avec barres horizontales en utilisant l'argument `orientation=`)."}
 chart(data = zooplankton, aes(y = class)) +
   geom_bar(orientation = "y") +
   xlab("Effectifs")
