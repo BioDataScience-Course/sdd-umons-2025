@@ -774,24 +774,24 @@ Si vous utilisez les fonctions svTidy, il est conseillé d'utiliser les fonction
 ```{r, warning=FALSE}
 tooth <- read("ToothGrowth", package = "datasets", lang = "fr")
 tooth_summary <- summarise_(tooth,
-  moyenne = ~fmean(len),
-  minimum = ~fmin(len),
-  médiane = ~fmedian(len),
-  maximum = ~fmax(len))
+  "Allongement moyen"   = ~fmean(len),
+  "Allongement minimal" = ~fmin(len),
+  "Allongement médian"  = ~fmedian(len),
+  "Allongement maximal" = ~fmax(len))
 # Utiliser soit kable(), soit tabularise() pour afficher un tableau
 #knitr::kable(tooth_summary, digits = 2,
 #  caption = "Allongement des dents chez des cochons d'Inde recevant de l'acide ascorbique.")
 tabularise(tooth_summary)
 ```
 
-Vous noterez que toutes le colonnes du tableau s'appellent "Allongement des dents". C'est le label de la variable `len`. Ce n'est pas très pratique. Vous pouvez changer ou créer un label explicite pour vos variables calculées en utilisant la fonction `labelise()`.
+Vous noterez que toutes le colonnes du tableau s'appellent "Allongement des dents". C'est le label de la variable `len`. Ce n'est pas très pratique. Vous pouvez éviter ce problème en enlevant le label avec `unlabelise()` avant de faire le `summarise()` :
 
-```{r}
-tooth_summary <- summarise_(tooth,
-  moyenne = ~fmean(len) |> labelise("Allongement moyen"),
-  minimum = ~fmin(len) |> labelise("Allongement minimal"),
-  médiane = ~fmedian(len) |> labelise("Allongement médian"),
-  maximum = ~fmax(len) |> labelise("Allongement maximal"))
+```{r, warning=FALSE}
+tooth_summary <- summarise_(unlabelise(tooth),
+  "Allongement moyen"   = ~fmean(len),
+  "Allongement minimal" = ~fmin(len),
+  "Allongement médian"  = ~fmedian(len),
+  "Allongement maximal" = ~fmax(len))
 tabularise(tooth_summary)
 ```
 
@@ -799,13 +799,13 @@ Voici les mêmes calculs, mais effectués séparément pour les deux types de su
 
 ```{r, warning=FALSE}
 tooth_summary2 <- {
-  .= tooth
+  .= unlabelise(tooth, "len") # Enlever seulement le label pour len
   .= group_by_(., ~supp)
   .= summarise_(
-    moyenne = ~fmean(len) |> labelise("Allongement moyen"),
-    minimum = ~fmin(len) |> labelise("Allongement minimal"),
-    médiane = ~fmedian(len) |> labelise("Allongement médian"),
-    maximum = ~fmax(len) |> labelise("Allongement maximal"))
+    "Allongement moyen"   = ~fmean(len),
+    "Allongement minimal" = ~fmin(len),
+    "Allongement médian"  = ~fmedian(len),
+    "Allongement maximal" = ~fmax(len))
 }
 tabularise(tooth_summary2)
 ```
@@ -815,26 +815,31 @@ tabularise(tooth_summary2)
 -   Tout comme lors de réalisation d'une boite à moustaches, vous devez être particulièrement vigilant au nombre d'observation par sous-groupe. Pensez toujours à ajoutez à chaque tableau de résumé des données, le nombre d'observations par sous-groupe grâce à la fonction `fnobs()` qui comptabilise le nombre d'observations non manquantes.
 
 ```{r, warning=FALSE}
-tooth_summary2 <- summarise_(group_by_(tooth, ~supp),
-  moyenne = ~fmean(len) |> labelise("Allongement moyen"),
-  minimum = ~fmin(len) |> labelise("Allongement minimal"),
-  médiane = ~fmedian(len) |> labelise("Allongement médian"),
-  maximum = ~fmax(len) |> labelise("Allongement maximal"),
-  nobs    = ~fnobs(len) |> labelise("Nombre d'observations"))
+tooth_summary2 <- {
+  .= unlabelise(tooth, "len") # Enlever seulement le label pour len
+  .= group_by_(., ~supp)
+  .= summarise_(
+    "Allongement moyen"     = ~fmean(len),
+    "Allongement minimal"   = ~fmin(len),
+    "Allongement médian"    = ~fmedian(len),
+    "Allongement maximal"   = ~fmax(len),
+    "Nombre d'observations" = ~fnobs(len))
+}
 tabularise(tooth_summary2)
 ```
 
 Si vous souhaitez connaitre le nombre d'observations **totales** dans votre jeu de données, utilisez `fn()` au lieu de `fnobs()`. Vous pouvez naturellement utiliser les deux simultanément.
 
 ```{r, warning=FALSE}
-urchin_skeleton_summary <- summarise_(group_by_(urchin, ~origin),
-  moyenne = ~fmean(skeleton, na.rm = TRUE),
-  n       = ~fn(skeleton),    # Nombre total de cas
-  nobs    = ~fnobs(skeleton)) # Nombre de cas hors valeurs manquantes
-tabularise(urchin_skeleton_summary) |>
-  Stb$set_header_labels(values = c(# Change le nom des colonnes
-    "Origine", "Masse squelettique moyenne",
-    "Observations totales", "Observations non manquantes"))
+urchin_skeleton_summary <- {
+  .= unlabelise(urchin, "skeleton")
+  .= group_by_(., ~origin)
+  .= summarise_(
+    "Masse squelettique moyenne"  = ~fmean(skeleton),
+    "Observations totales"        = ~fn(skeleton),
+    "Observations non manquantes" = ~fnobs(skeleton))
+}
+tabularise(urchin_skeleton_summary)
 ```
 
 Dans le cas présent, le nombre d'observations utilisable est nettement inférieur au nombre total de cas dans le tableau. Cette distinction entre `fn()` et `fnobs()` est donc très importante. **Ne la perdez pas de vue.** De plus, si vous n'utilisez pas `na.rm = TRUE` dans les fonctions comme `mean()`/`fmean()`, `median()`/`fmedian()`... vous aurez des `NA` partout dans votre tableau résumé. D'un autre côté, soyez bien conscient qu'avec `na.rm = TRUE`, c'est le nombre d'observations hors valeurs manquantes qui est utilisé pour ces calculs !
@@ -844,7 +849,7 @@ Les fonctions `fn()` et `fnobs()` ne sont pas définies dans le tidyverse. Ce so
 -   `summarise()` calcule ses variables dans le même environnement que le tableau de départ. Donc, si vous utiliser des noms de colonnes qui existent déjà, elles seraient écrasées par le résultat du calcul. Avec un **data.trame**, ceci n'est pas permis (le code fonctionnera pourtant dans un autre contexte avec un **data.frame**, c'est pourquoi nous convertissons d'abord `tooth` avec `as_dtf()`). Voici un exemple concret :
 
 ```{r}
-tooth_summary3 <- summarise(as_dtf(tooth),
+tooth_summary3 <- summarise(unlabelise(tooth),
   "len" = mean(len), # Notez le même nom à gauche et à droite du = (len)
   "len_sd" = sd(len))
 knitr::kable(tooth_summary3, digits = 2,
@@ -862,7 +867,7 @@ Conclusion : ne nommez **jamais** vos variables créées avec `summarise()` exa
 Toutefois, `summarise_()` fonctionne différemment et n'a pas de problèmes dans ce cas-là :
 
 ```{r}
-tooth_summary4 <- summarise_(tooth,
+tooth_summary4 <- summarise_(unlabelise(tooth),
   "len" = ~fmean(len), # Notez le même nom à gauche et à droite du = (len)
   "len_sd" = ~fsd(len))
 knitr::kable(tooth_summary4, digits = 2,
