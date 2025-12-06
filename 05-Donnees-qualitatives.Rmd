@@ -789,7 +789,7 @@ Il existe, en fait, plusieurs versions pour la fusion de tableaux, représentée
 
 ##### À vous de jouer ! {.unnumbered}
 
-`r learnr("A05Lb_multi-table", title = "Traitements multi-tableaux", toc = "Traitements multi-tableaux")`
+`r learnr("A05Lb_multi_table", title = "Traitements multi-tableaux", toc = "Traitements multi-tableaux")`
 
 ```{r assign_A05Ia_belgium_demo, echo=FALSE, results='asis'}
 if (exists("assignment"))
