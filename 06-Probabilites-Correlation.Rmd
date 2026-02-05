@@ -1161,7 +1161,7 @@ Vous venez de terminer le module six. Ce module vous a permis d'apprendre les ba
 ##### Code des exemples {.unnumbered}
 
 -  [Document HTML](more/06-Probabilites-Correlation.html)
--  [Script R](https://github.com/BioDataScience-Course/sdd-umons2-2025/blob/main/R/06-Probabilites-Correlation.R){target="top"}
+-  [Script R](https://github.com/BioDataScience-Course/sdd-umons-2025/blob/main/R/06-Probabilites-Correlation.R){target="top"}
 
 ##### Progression {.unnumbered}
 
