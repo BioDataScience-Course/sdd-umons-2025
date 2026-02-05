@@ -903,24 +903,6 @@ ans_x <- anscombe[, 1:4]
 ans_y <- anscombe[, 5:8]
 ```
 
-````{=html}
-<!--- G.E.
-Que valent les moyennes^[La fonction `lapply()` distribue la fonction donnée en argument sur tous les éléments du tableau, et calcule ici la moyenne successivement pour les 4 variables.], les variances et les coefficients de corrélation\ ?
-
-```{r, eval=FALSE}
-# Moyennes des X
-lapply(ans_x, mean)
-# Variance des X
-lapply(ans_x, var)
-# Moyenne des Y
-lapply(ans_y, mean)
-# Variance des Y
-lapply(ans_y, var)
-```
-
---->
-````
-
 Que valent les moyennes, les variances, les écarts-types pour les quatre variables *x* ?
 
 ```{r}
@@ -959,7 +941,7 @@ pl <- list(
 combine_charts(pl)
 ```
 
-Nous voyons que ces quatre paires de variables n'ont **rien à voir les unes avec les autres !** Il est même possible d'aller encore plus loin, voir le [datasaurus dozen](https://blog.revolutionanalytics.com/2017/05/the-datasaurus-dozen.html), ou encore [ici](https://www.autodeskresearch.com/publications/samestats).
+Nous voyons que ces quatre paires de variables n'ont **rien à voir les unes avec les autres !** Il est même possible d'aller encore plus loin, voir [same stats, different graphs](https://www.autodeskresearch.com/publications/samestats).
 
 ##### À vous de jouer ! {.unnumbered}
 

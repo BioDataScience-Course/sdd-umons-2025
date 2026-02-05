@@ -80,7 +80,7 @@ learnitdown$assign_url <- list(
   A04Ga_biometry       = "https://classroom.github.com/a/blC-3zPZ",
   A05Ia_belgium_demo   = "https://classroom.github.com/a/CQCQZ2OS",
   # Q2
-  A06Ia_correlation    = "https://classroom.github.com/a/...",
+  A06Ia_correlation    = "https://classroom.github.com/a/zBiX2yci",
   A07Ia_pea            = "https://classroom.github.com/a/...",
   A07Ga_human          = "https://classroom.github.com/a/...",
   A08Ia_ttest          = "https://classroom.github.com/a/...",
