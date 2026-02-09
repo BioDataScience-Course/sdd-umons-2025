@@ -1162,10 +1162,11 @@ Vous venez de terminer le module six. Ce module vous a permis d'apprendre les ba
 
 Le matériel didactique ci-dessous a été créé par une IA générative, mais a ensuite été vérifié par un humain.
 
--   [Podcast section 6.1 (NotebookLM)](https://link.sciviews.org/A06_61podcast_notebooklm)
+-   [Podcast section 6.1 (NotebookLM) - téléchargement](https://link.sciviews.org/A06_61podcast_notebooklm)
 -   [Présentation vidéo section 6.1 (NotebookLM)](https://link.sciviews.org/A06_61video_notebooklm)
 -   [Slides section 6.1 (NotebookLM)](https://link.sciviews.org/A06_61slides_notebooklm)
 -   [Infographics section 6.1 (NotebookLM)](https://link.sciviews.org/A06_61infographics_notebooklm)
+-   [Quizz section 6.1 (NotebookLM)](https://link.sciviews.org/A061quiz_notebooklm)
 
 `r h5p(266, "A06Hq_flash61", height = 400, toc = "Flashcards section 6.1")`
 
