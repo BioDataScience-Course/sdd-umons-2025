@@ -1,6 +1,26 @@
 # Moyenne {#moyenne}
 
+```{r purlheader, echo=FALSE}
+#' ---
+#' title: "SDD I module 68 : Moyenne"
+#' author: "Ph. Grosjean et G. Engels"
+#' date: "2025-2026"
+#' output:
+#'   html_document:
+#'     highlight: kate
+#' ---
+#' 
+#' Document complémentaire au [module 8 du cours SDD I de 2025-2026](https://wp.sciviews.org/sdd-umons-2025/moyenne.html).
+#' Distribué sous licence [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr).
+#' 
+#' **Veuillez vous référer au cours en ligne pour les explications et les interprétations de cette analyse.**
+#' 
+#' [Installer un environnement R](https://github.com/SciViews/svbox/tree/main/svbox2025-native)
+#' adéquat pour reproduire cette analyse. 
+```
+
 ```{r setup, include=FALSE, echo=FALSE, message=FALSE, results='hide'}
+# Initie le dialecte SciViews::R avec le module d'inférence
 SciViews::R("infer", lang = "fr")
 ```
 

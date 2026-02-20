@@ -81,8 +81,8 @@ learnitdown$assign_url <- list(
   A05Ia_belgium_demo   = "https://classroom.github.com/a/CQCQZ2OS",
   # Q2
   A06Ia_correlation    = "https://classroom.github.com/a/zBiX2yci",
-  A07Ia_pea            = "https://classroom.github.com/a/...",
-  A07Ga_human          = "https://classroom.github.com/a/...",
+  A07Ia_pea            = "https://classroom.github.com/a/do5k6xnr",
+  A07Ga_human          = "https://classroom.github.com/a/1oznwQf6",
   A08Ia_ttest          = "https://classroom.github.com/a/...",
   A09Ia_acidification  = "https://classroom.github.com/a/...",
   A10Ia_anova2         = "https://classroom.github.com/a/...",

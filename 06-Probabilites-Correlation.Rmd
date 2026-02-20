@@ -388,7 +388,7 @@ $$\mathrm{P}(E) = \frac{1}{n_E} = \frac{1}{\infty} = 0$$
 
 ... et ce calcul est *correct* ! Il correspond d'ailleurs au résultat pour une loi de distribution continue.
 
-```{block, type='warning'}
+```{block, type='warning', purl=FALSE}
 Dans le cas de probabilités continues, la probabilité d'un évènement en particulier est **toujours nulle**. Nous pouvons seulement calculer que l'un parmi plusieurs évènements se produise (compris dans un intervalle).
 ```
 

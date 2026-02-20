@@ -4,7 +4,7 @@
 # - Knit it to HTML using purl
 # - Place these files in /more subdirectory of the website
 
-files_noext <- c("06-Probabilites-Correlation")
+files_noext <- c("06-Probabilites-Correlation", "07-Distributions-Chi2")
 output_dir <- "../wp.sciviews.org/htdocs/sdd-umons-2025/more"
 fs::dir_create(output_dir)
 fs::dir_create("R")

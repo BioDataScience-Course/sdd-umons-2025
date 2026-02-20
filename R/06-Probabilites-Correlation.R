@@ -29,8 +29,6 @@ dtx(Portée = 1:4, Probabilité = 1/4) %>.%
     geom_segment(aes(x = Portée, xend = Portée, y = 0, yend = Probabilité)) +
   ylab("Probabilité")
 
-## Dans le cas de probabilités continues, la probabilité d'un évènement en particulier est **toujours nulle**. Nous pouvons seulement calculer que l'un parmi plusieurs évènements se produise (compris dans un intervalle).
-
 # Probabilité pour le quantile 2.5 de la distribution uniforme [0, 4]
 punif(2.5, min = 0, max = 4, lower.tail = TRUE)
 
