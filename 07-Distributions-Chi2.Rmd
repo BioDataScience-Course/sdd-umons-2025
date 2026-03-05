@@ -835,6 +835,8 @@ Les **métriques** sont des variables issues de calculs plus complexes et qui vi
 **Devenez une/une bon(ne) scientifique des données : créez et utilisez des métriques adéquates le plus souvent possible.**
 ```
 
+##### Autre matériel didactique créé par IA {.unnumbered}
+
 Le matériel didactique ci-dessous a été créé par une IA générative, mais a ensuite été vérifié par un humain. Il concerne la présente section 7.6.
 
 -   [Podcast section 7.6 (NotebookLM) - téléchargement](https://linkly.link/2bDr9)
