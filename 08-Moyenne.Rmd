@@ -1058,8 +1058,8 @@ Des podcasts, des présentations vidéos, des quiz et des flashcards créés par
 <!-- -  [Document HTML](more/08-Moyenne.html) -->
 <!-- -  [Script R](https://github.com/BioDataScience-Course/sdd-umons-2025/blob/main/R/08-Moyenne.R){target="top"} -->
 
--  [Document HTML](https://linkly.link/2bDwK)
--  [Script R](https://linkly.link/2bDw0){target="top"}
+-  [Document HTML](https://link.sciviews.org/A08_25M_Rscript_html)
+-  [Script R](https://link.sciviews.org/A08_25M_Rscript){target="top"}
 
 ##### Progression {.unnumbered}
 
