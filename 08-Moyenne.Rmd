@@ -1051,7 +1051,15 @@ Vous venez de terminer le module 8. Ce module vous a permis d'apprendre une gran
 
 ##### Autre matériel didactique créé par IA {.unnumbered}
 
-Des podcasts, des présentations vidéos, des quiz et des flashcards créés par NotebookLM sont disponibles en fin de sections 7.4, 7.5 et 7.6. Ils couvrent l'ensemble de la matière du module 7.
+Le matériel didactique ci-dessous a été créé par une IA générative, mais a ensuite été vérifié par un humain.
+
+-   [Podcast sections 8.2 - 8.6 (NotebookLM) - téléchargement](https://link.sciviews.org/A08_82-6podcast_notebooklm)
+-   [Présentation vidéo sections 8.2 - 8.6 partiel (NotebookLM)](https://link.sciviews.org/A08_82-6video_notebooklm)
+-   [Slides sections 8.2 - 8.6 (NotebookLM)](https://link.sciviews.org/A08_82-6slides_notebooklm)
+-   [Infographics sections 8.2 - 8.6 partiel (NotebookLM)](https://link.sciviews.org/A08_82-6infographics_notebooklm)
+-   [Quizz sections 8.2 - 8.6 (NotebookLM)](https://link.sciviews.org/A08_82-6quiz_notebooklm)
+
+`r h5p(272, "A08Za_flash8", height = 400, toc = "Flashcards sections 8.2-8.6")`
 
 ##### Code des exemples {.unnumbered}
 
