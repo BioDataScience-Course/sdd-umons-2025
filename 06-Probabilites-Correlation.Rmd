@@ -1140,7 +1140,7 @@ if (exists("assignment"))
   assignment("A06Ia_correlation", part = NULL,
     url = "https://github.com/BioDataScience-Course/A06Ia_correlation",
     course.ids = c(
-      'S-BIOG-027' = !"A06Ia_{YY}M_correlation"),
+      'S-BIOG-027' = !"A06Ia-{YY}M-correlation"),
     course.urls = c(
       'S-BIOG-027' = !"{assign_url$A06Ia_correlation}"),
     course.starts = c(

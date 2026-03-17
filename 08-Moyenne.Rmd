@@ -794,7 +794,7 @@ if (exists("assignment"))
   assignment("A08Ia_ttest", part = NULL,
     url = "https://github.com/BioDataScience-Course/A08Ia_ttest",
     course.ids = c(
-      'S-BIOG-027' = !"A08Ia_{YY}M_ttest"),
+      'S-BIOG-027' = !"A08Ia-{YY}M-ttest"),
     course.urls = c(
       'S-BIOG-027' = !"{assign_url$A08Ia_ttest}"),
     course.starts = c(
@@ -1031,7 +1031,7 @@ if (exists("assignment2"))
   assignment2("A07Ga_human", part = "II",
     url = "https://github.com/BioDataScience-Course/A07Ga_human",
         course.ids = c(
-      'S-BIOG-027' = !"A07Ga_{YY}M_human"),
+      'S-BIOG-027' = !"A07Ga-{YY}M-human"),
     course.urls = c(
       'S-BIOG-027' = !"{assign_url$A07Ga_human}"),
     course.starts = c(
