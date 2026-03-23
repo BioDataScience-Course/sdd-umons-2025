@@ -1,5 +1,5 @@
 #' ---
-#' title: "SDD I module 68 : Moyenne"
+#' title: "SDD I module 8 : Moyenne"
 #' author: "Ph. Grosjean et G. Engels"
 #' date: "2025-2026"
 #' output:

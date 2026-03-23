@@ -5,7 +5,7 @@
 # - Place these files in /more subdirectory of the website
 
 files_noext <- c("06-Probabilites-Correlation", "07-Distributions-Chi2",
-  "08-Moyenne")
+  "08-Moyenne", "09-Variance-I", "10-Variance-II")
 output_dir <- "../wp.sciviews.org/htdocs/sdd-umons-2025/more"
 fs::dir_create(output_dir)
 fs::dir_create("R")
