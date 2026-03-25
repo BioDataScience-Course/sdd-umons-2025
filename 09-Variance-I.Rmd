@@ -610,6 +610,19 @@ Vous venez de terminer le module 9. Ce module vous a permis d'apprendre une gran
 
 `r show_ex_toc("09")`
 
+##### Autre matériel didactique créé par IA {.unnumbered}
+
+Le matériel didactique ci-dessous a été créé par une IA générative, mais a ensuite été vérifié par un humain.
+
+-   [Podcast sections 9.1 - 9.4 (NotebookLM) - téléchargement](https://filedn.com/lzGVgfOGxb6mHFQcRn9ueUb/sdd-umons/sdd1_09/A09_91-4podcast_notebooklm.m4a)
+-   [Présentation vidéo sections 9.1 - 9.4 (NotebookLM)](https://filedn.com/lzGVgfOGxb6mHFQcRn9ueUb/sdd-umons/sdd1_09/A09_91-4video_notebooklm.mp4)
+-   [Slides sections 9.1 - 9.4 (NotebookLM)](https://filedn.com/lzGVgfOGxb6mHFQcRn9ueUb/sdd-umons/sdd1_09/A09_91-4slides_notebooklm.pdf)
+-   [Infographics sections 9.1 - 9.4 partiel (NotebookLM)](https://filedn.com/lzGVgfOGxb6mHFQcRn9ueUb/sdd-umons/sdd1_09/A09_91-4infographics_notebooklm.png)
+-   [Quizz sections 9.1 - 9.4 (NotebookLM)](https://filedn.com/lzGVgfOGxb6mHFQcRn9ueUb/sdd-umons/sdd1_09/A09_91-4quiz_notebooklm.html)
+
+`r h5p(273, "A09Za_flash91-4", height = 400, toc = "Flashcards sections 9.1 - 9.4")`
+
+
 ##### Code des exemples {.unnumbered}
 
 -  [Document HTML](more/09-Variance-I.html)
